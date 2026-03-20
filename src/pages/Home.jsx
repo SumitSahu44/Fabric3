@@ -72,7 +72,7 @@ const Home = () => {
             </div>
             {/* Category 2 */}
             <div className="relative group h-[400px] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1584184924103-e310d9dc85fc?w=600" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+              <img src="https://media.istockphoto.com/id/1180345900/photo/workers-on-factory-floor-of-mumbai-dyeing-and-printing-mill.webp?a=1&b=1&s=612x612&w=0&k=20&c=7wvpbXHt_XiQPZ7ZJk3mnb6jAp_7w3fCST10hHPSbpU=" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-xl font-black uppercase tracking-tighter">Industrial Canvas</h3>
                 <p className="text-[9px] uppercase tracking-widest text-orange-500 mt-2">Heavy Duty • High Durability</p>
@@ -80,7 +80,7 @@ const Home = () => {
             </div>
             {/* Category 3 */}
             <div className="relative group h-[400px] overflow-hidden md:mt-12">
-              <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+              <img src="https://media.istockphoto.com/id/157639058/photo/silk-clothes-rolls.webp?a=1&b=1&s=612x612&w=0&k=20&c=y9DM4bk_Guwd3sphNCcnOmN6mFbnLwaVHTSTQik3cKA=" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-xl font-black uppercase tracking-tighter">Dyed & Printed</h3>
                 <p className="text-[9px] uppercase tracking-widest text-orange-500 mt-2">Eco-Friendly Dyes • Custom Designs</p>

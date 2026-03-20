@@ -54,7 +54,7 @@ const Career = () => {
               <h4 className="font-bold text-sm uppercase tracking-tight text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">
                 {item.title}
               </h4>
-              <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-widest font-light opacity-80">
+              <p className="text-sm text-slate-700 leading-relaxed uppercase tracking-wide font-medium">
                 {item.desc}
               </p>
             </div>

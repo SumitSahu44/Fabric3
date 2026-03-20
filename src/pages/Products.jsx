@@ -8,10 +8,10 @@ const Products = () => {
   const categories = ['All', 'Pure Cotton', 'Industrial', 'Yarn', 'Dyed'];
   
   const productData = [
-    { id: 1, name: 'Premium Organic Cotton', cat: 'Pure Cotton', img: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600' },
-    { id: 2, name: 'Heavy Duty Canvas', cat: 'Industrial', img: 'https://images.unsplash.com/photo-1584184924103-e310d9dc85fc?w=600' },
-    { id: 3, name: 'Cotton Slub Yarn', cat: 'Yarn', img: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600' },
-    { id: 4, name: 'Indigo Dyed Fabric', cat: 'Dyed', img: 'https://images.unsplash.com/photo-1620733723572-11c53f73a2ad?w=600' },
+    { id: 1, name: 'Premium Organic Cotton', cat: 'Pure Cotton', img: 'https://plus.unsplash.com/premium_photo-1770294856128-b4325ae5c7f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UHJlbWl1bSUyME9yZ2FuaWMlMjBDb3R0b24lMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D' },
+    { id: 2, name: 'Heavy Duty Canvas', cat: 'Industrial', img: 'https://images.unsplash.com/photo-1619459075136-2b53c6153d4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SGVhdnklMjBEdXR5JTIwQ2FudmFzJTIwZmFicmljfGVufDB8fDB8fHww' },
+    { id: 3, name: 'Cotton Slub Yarn', cat: 'Yarn', img: 'https://images.unsplash.com/photo-1757382603782-839864de55d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENvdHRvbiUyMFNsdWIlMjBZYXJuJTIwZmFicmljfGVufDB8fDB8fHww' },
+    { id: 4, name: 'Indigo Dyed Fabric', cat: 'Dyed', img: 'https://images.unsplash.com/photo-1761808070278-dd73772be230?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEluZGlnbyUyMER5ZWQlMjBGYWJyaWN8ZW58MHx8MHx8fDA%3D' },
   ];
 
   const filteredProducts = filter === 'All' 
@@ -61,7 +61,7 @@ const Products = () => {
                   <img 
                     src={product.img} 
                     alt={product.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover transition-all duration-700"
                   />
                   <div className="absolute top-4 right-4 bg-white p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <ArrowUpRight size={16} className="text-slate-900" />

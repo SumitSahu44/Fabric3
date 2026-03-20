@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -39,12 +40,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-orange-600 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-orange-600 transition-all shadow-2xl">
+            <Link to="/enquiry" className="bg-orange-600 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-orange-600 transition-all shadow-2xl">
               Trade Enquiry
-            </button>
-            <button className="border border-white/40 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] backdrop-blur-md hover:bg-white hover:text-black transition-all">
+            </Link>
+            <Link to="/products" className="border border-white/40 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] backdrop-blur-md hover:bg-white hover:text-black transition-all">
               Explore Products
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>
