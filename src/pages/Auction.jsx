@@ -8,7 +8,7 @@ const Auction = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Inventory Liquidation</span>
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">E-Auction <span className="text-slate-400">Portal.</span></h1>
+            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900"><span className="lowercase">e-</span>Auction <span className="text-slate-400">Portal.</span></h1>
           </div>
           <div className="flex gap-4">
             <div className="bg-green-100 text-green-700 px-4 py-2 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">

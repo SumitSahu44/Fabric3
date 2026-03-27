@@ -93,7 +93,7 @@ const Home = () => {
       {/* 4. Core Features Grid (The one you had, but styled better) */}
       <section className="py-24 bg-slate-50 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block">E-Service Hub</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block"><span className="lowercase">e-</span>Service Hub</span>
           <h2 className="text-3xl font-black uppercase tracking-tighter text-blue-900 mb-16">Digital Procurement.</h2>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">

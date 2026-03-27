@@ -33,11 +33,17 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">Quick Navigation</h4>
             <ul className="space-y-3">
-              {['About Us', 'Products', 'E-Auction', 'Enquiry', 'Career'].map((item) => (
-                <li key={item}>
-                  <Link to={`/${item.toLowerCase().replace(' ', '')}`} className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white flex items-center gap-2 group">
+              {[
+                { name: 'About Us', path: '/about' },
+                { name: 'Products', path: '/products' },
+                { name: 'E-Auction', path: '/auction' },
+                { name: 'Enquiry', path: '/enquiry' },
+                { name: 'Career', path: '/career' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white flex items-center gap-2 group">
                     <ArrowUpRight size={10} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    {item}
+                    {item.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{item.name.slice(2)}</> : item.name}
                   </Link>
                 </li>
               ))}

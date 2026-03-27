@@ -19,6 +19,8 @@ import Appointment from './pages/Appointment';
 import Equotation from './pages/Equotation';
 import MediaEvents from './pages/MediaEvents';
 import Reviews from './pages/Reviews';  
+import TextileAssociates from './pages/TextileAssociates';
+
 // Baki pages bhi aise hi import honge:
 // import Products from './pages/Products';
 
@@ -52,6 +54,7 @@ function App() {
             <Route path="/appointment" element={<Appointment />} /> 
             <Route path="/equotation" element={<Equotation />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/associates" element={<TextileAssociates />} />
             {/* Jab Product page ban jayega: <Route path="/products" element={<Products />} /> */}
           </Routes>
 
