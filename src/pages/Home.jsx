@@ -108,7 +108,7 @@ const Home = () => {
                 to={item.path}
                 className="group p-10 bg-white border border-slate-100 hover:border-orange-500 transition-all shadow-sm hover:shadow-xl"
               >
-                <p className="font-black uppercase text-[10px] tracking-[0.2em] group-hover:text-orange-600 transition-colors">{item.name}</p>
+                <p className="font-black  text-[10px] tracking-[0.2em] group-hover:text-orange-600 transition-colors">{item.name}</p>
                 <div className="mt-4 h-[1px] w-0 group-hover:w-full bg-orange-600 transition-all duration-500 mx-auto"></div>
               </Link>
             ))}
