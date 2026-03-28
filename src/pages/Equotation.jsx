@@ -11,11 +11,11 @@ const Equotation = () => {
         
         {/* Header Section */}
         <div className="mb-20 text-center md:text-left">
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Smart Pricing Portal</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Smart Pricing Portal</span>
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
             Digital <br /> <span className="text-slate-400 italic" style={{ WebkitTextStroke: '1px #94a3b8', color: 'transparent' }}>e-Quotation.</span>
           </h1>
-          <p className="mt-6 text-xs text-slate-500 uppercase tracking-widest font-bold max-w-xl leading-relaxed">
+          <p className="mt-6 text-xs text-slate-600 uppercase tracking-widest font-bold max-w-xl leading-relaxed">
             Generate industrial-grade quotations for bulk cotton orders. Our automated system processes specifications for global export standards.
           </p>
         </div>
@@ -35,8 +35,8 @@ const Equotation = () => {
                   <li key={i} className="flex gap-4">
                     <span className="text-orange-600 font-black text-xs">{item.n}</span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-900">{item.t}</p>
-                      <p className="text-[9px] text-slate-500 uppercase mt-1 leading-relaxed">{item.d}</p>
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-slate-900">{item.t}</p>
+                      <p className="text-[9px] text-slate-600 uppercase mt-1 leading-relaxed">{item.d}</p>
                     </div>
                   </li>
                 ))}
@@ -45,7 +45,7 @@ const Equotation = () => {
             
             <div className="p-6 bg-blue-900 text-white rounded-sm">
               <ShieldCheck className="mb-4 text-orange-500" size={24} />
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] leading-relaxed">
                 All generated quotes are valid for 7 business days as per market cotton rates.
               </p>
             </div>
@@ -57,7 +57,7 @@ const Equotation = () => {
                 <h3 className="text-xl font-black uppercase tracking-tighter text-slate-900 flex items-center gap-3">
                   <Calculator size={20} className="text-orange-600" /> Request Details
                 </h3>
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Step {step} of 2</span>
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Step {step} of 2</span>
              </div>
 
              <form className="space-y-10">
@@ -90,7 +90,7 @@ const Equotation = () => {
                     <button 
                       onClick={() => setStep(2)}
                       type="button" 
-                      className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[10px] tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-orange-600 transition-all"
+                      className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-orange-600 transition-all"
                     >
                       Next Step <ArrowRight size={14} />
                     </button>
@@ -111,13 +111,13 @@ const Equotation = () => {
                       <button 
                         onClick={() => setStep(1)}
                         type="button" 
-                        className="w-1/3 border border-slate-200 py-5 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-slate-50 transition-all"
+                        className="w-1/3 border border-slate-200 py-5 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-slate-50 transition-all"
                       >
                         Back
                       </button>
                       <button 
                         type="submit" 
-                        className="w-2/3 bg-orange-600 text-white py-5 font-black uppercase text-[10px] tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-slate-900 transition-all shadow-xl shadow-orange-600/20"
+                        className="w-2/3 bg-orange-600 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-slate-900 transition-all shadow-xl shadow-orange-600/20"
                       >
                         Generate Quote <ClipboardCheck size={14} />
                       </button>

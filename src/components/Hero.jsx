@@ -29,7 +29,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">
+          <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-[11px] md:text-xs mb-4 block">
             Ahmedabad's Leading Cotton Hub
           </span>
           <h1 className="text-white text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6 leading-none">
@@ -40,10 +40,10 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/enquiry" className="bg-orange-600 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-orange-600 transition-all shadow-2xl">
+            <Link to="/enquiry" className="bg-orange-600 text-white px-8 md:px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-white hover:text-orange-600 transition-all shadow-2xl">
               Trade Enquiry
             </Link>
-            <Link to="/products" className="border border-white/40 text-white px-8 md:px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] backdrop-blur-md hover:bg-white hover:text-black transition-all">
+            <Link to="/products" className="border border-white/40 text-white px-8 md:px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] backdrop-blur-md hover:bg-white hover:text-black transition-all">
               Explore Products
             </Link>
           </div>

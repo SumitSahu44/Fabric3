@@ -40,13 +40,13 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Global Connect</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Global Connect</span>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
               Get in <br /> <span className="text-slate-400 italic" style={{ WebkitTextStroke: '1px #94a3b8', color: 'transparent' }}>Touch.</span>
             </h1>
           </motion.div>
           <div>
-            <p className="text-xs text-slate-500 uppercase tracking-widest font-bold leading-relaxed max-w-sm md:ml-auto md:text-right">
+            <p className="text-xs text-slate-600 uppercase tracking-widest font-bold leading-relaxed max-w-sm md:ml-auto md:text-right">
               Whether you are looking for bulk export or industrial supply contracts, our team in Ahmedabad is ready to assist.
             </p>
           </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                   <item.icon size={20} className={item.color + " group-hover:text-white"} />
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">{item.title}</h4>
+                  <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">{item.title}</h4>
                   <p className="text-sm font-bold text-slate-900 uppercase tracking-tight leading-snug">{item.detail}</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Contact = () => {
 
             {/* Social Media Integration */}
             <div className="pt-8 border-t border-slate-100">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Follow Our Network</h4>
+              <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Follow Our Network</h4>
               <div className="flex gap-4">
                 {[Linkedin, Facebook, Twitter].map((Icon, idx) => (
                   <a key={idx} href="#" className="w-10 h-10 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-orange-600 hover:border-orange-600 transition-all">
@@ -100,7 +100,7 @@ const Contact = () => {
             <div className="bg-slate-900 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
               <div>
                 <h4 className="text-white font-black uppercase text-sm tracking-widest">Our Textile Associates</h4>
-                <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] mt-1 italic">Strategically located across Pan-India Cotton Belts.</p>
+                <p className="text-[11px] text-slate-400 uppercase tracking-[0.2em] mt-1 italic">Strategically located across Pan-India Cotton Belts.</p>
               </div>
               <div className="flex -space-x-3">
                 {[1,2,3,4].map(i => (

@@ -101,7 +101,7 @@ const LiveChat = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="TYPE BULK ENQUIRY..." 
-                className="flex-grow text-[10px] font-black uppercase tracking-widest outline-none py-2 border-none placeholder:text-slate-300"
+                className="flex-grow text-[11px] font-black uppercase tracking-widest outline-none py-2 border-none placeholder:text-slate-300"
               />
               <button 
                 type="submit"

@@ -10,7 +10,7 @@ const Management = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4 text-center">Leadership</span>
+        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4 text-center">Leadership</span>
         <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 text-center mb-16">Our Management.</h1>
         <div className="grid md:grid-cols-2 gap-12">
           {team.map((m, i) => (
@@ -18,8 +18,8 @@ const Management = () => {
               <img src={m.img} className="w-32 h-32 rounded-full object-cover grayscale border-4 border-white shadow-xl" alt={m.name} />
               <div>
                 <h3 className="text-xl font-black uppercase tracking-tight text-slate-900">{m.name}</h3>
-                <p className="text-orange-600 text-[10px] font-bold uppercase tracking-widest mt-1 mb-4">{m.role}</p>
-                <p className="text-xs text-slate-500 uppercase tracking-tighter leading-relaxed">{m.bio}</p>
+                <p className="text-orange-600 text-[11px] font-bold uppercase tracking-widest mt-1 mb-4">{m.role}</p>
+                <p className="text-xs text-slate-600 uppercase tracking-tighter leading-relaxed">{m.bio}</p>
               </div>
             </div>
           ))}

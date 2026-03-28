@@ -52,7 +52,7 @@ const MediaEvents = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-4 italic">Corporate Newsroom</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-4 italic">Corporate Newsroom</span>
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9]">
               Media & <br /> <span className="text-slate-300 italic" style={{ WebkitTextStroke: '1px #cbd5e1', color: 'transparent' }}>Live Events.</span>
             </h1>
@@ -64,8 +64,8 @@ const MediaEvents = () => {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all ${
-                  filter === f ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+                className={`px-6 py-2 text-[11px] font-black uppercase tracking-widest transition-all ${
+                  filter === f ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
                 {f}
@@ -108,7 +108,7 @@ const MediaEvents = () => {
                     <ArrowUpRight size={20} className="text-slate-300 group-hover:text-orange-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </h3>
                   
-                  <p className="text-slate-500 text-xs font-medium leading-relaxed max-w-lg uppercase tracking-tight">
+                  <p className="text-slate-600 text-xs font-medium leading-relaxed max-w-lg uppercase tracking-tight">
                     {item.desc}
                   </p>
                 </div>
@@ -125,16 +125,16 @@ const MediaEvents = () => {
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6 relative z-10">
             Stay Updated with <br /> <span className="text-orange-600">Parekh Insights.</span>
           </h2>
-          <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-10 max-w-md mx-auto">
+          <p className="text-slate-400 text-[11px] font-bold uppercase tracking-[0.3em] mb-10 max-w-md mx-auto">
             Subscribe to our newsletter for exclusive event invites and industry updates.
           </p>
           <div className="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10">
             <input 
               type="email" 
               placeholder="YOUR BUSINESS EMAIL" 
-              className="flex-grow bg-white/10 border border-white/20 px-6 py-4 text-white text-[10px] font-bold uppercase tracking-widest outline-none focus:border-orange-600 transition-all"
+              className="flex-grow bg-white/10 border border-white/20 px-6 py-4 text-white text-[11px] font-bold uppercase tracking-widest outline-none focus:border-orange-600 transition-all"
             />
-            <button className="bg-orange-600 text-white px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">
+            <button className="bg-orange-600 text-white px-10 py-4 text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">
               Subscribe
             </button>
           </div>

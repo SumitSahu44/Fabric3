@@ -14,11 +14,11 @@ const Tender = () => {
         
         {/* Header Section */}
         <div className="mb-20">
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Official Procurement</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Official Procurement</span>
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
             Tenders & <br /> <span className="text-slate-400">Contracts.</span>
           </h1>
-          <p className="mt-8 text-xs text-slate-500 uppercase tracking-widest font-bold max-w-lg leading-relaxed">
+          <p className="mt-8 text-xs text-slate-600 uppercase tracking-widest font-bold max-w-lg leading-relaxed">
             Parekh Fabrics invites verified vendors and industrial partners for official bulk contracts. All documents are digitally encrypted.
           </p>
         </div>
@@ -38,7 +38,7 @@ const Tender = () => {
                   <FileText size={20} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-orange-600 uppercase tracking-widest mb-1">{tender.id}</p>
+                  <p className="text-[11px] font-black text-orange-600 uppercase tracking-widest mb-1">{tender.id}</p>
                   <h4 className="text-lg font-black uppercase tracking-tight text-slate-900">{tender.title}</h4>
                   <div className="flex gap-4 mt-3">
                     <span className="flex items-center gap-1.5 text-[9px] font-bold text-slate-400 uppercase tracking-widest">
@@ -51,7 +51,7 @@ const Tender = () => {
                 </div>
               </div>
               <div className="mt-6 md:mt-0 flex gap-3">
-                <button className="bg-slate-900 text-white px-6 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-orange-600 transition-all flex items-center gap-2">
+                <button className="bg-slate-900 text-white px-6 py-3 text-[11px] font-black uppercase tracking-widest hover:bg-orange-600 transition-all flex items-center gap-2">
                   Apply Now <ChevronRight size={14} />
                 </button>
                 <button className="border border-slate-200 p-3 hover:bg-white transition-all text-slate-400 hover:text-slate-900">
@@ -66,9 +66,9 @@ const Tender = () => {
         <div className="mt-16 p-8 bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h4 className="text-sm font-black uppercase tracking-widest">Vendor Registration</h4>
-            <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Register your company to receive future tender alerts.</p>
+            <p className="text-[11px] text-slate-400 uppercase tracking-widest mt-1">Register your company to receive future tender alerts.</p>
           </div>
-          <button className="border border-white/20 px-8 py-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+          <button className="border border-white/20 px-8 py-3 text-[11px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
             Get Started
           </button>
         </div>

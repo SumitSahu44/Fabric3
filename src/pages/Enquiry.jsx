@@ -11,7 +11,7 @@ const Enquiry = () => {
           <div className="lg:col-span-1 space-y-10">
             <div>
               <h2 className="text-2xl font-black uppercase tracking-tighter text-slate-900 mb-6">Trade Enquiry</h2>
-              <p className="text-xs text-slate-500 leading-relaxed font-medium uppercase tracking-tight">
+              <p className="text-xs text-slate-600 leading-relaxed font-medium uppercase tracking-tight">
                 For bulk orders, export inquiries, and industrial contracts. Fill the e-form and our team will get back to you within 24 hours.
               </p>
             </div>

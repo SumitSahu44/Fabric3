@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
 
             {/* Location */}
-            <p className={`text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.3em] ${scrolled ? 'text-slate-500' : 'text-slate-300'
+            <p className={`text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.3em] ${scrolled ? 'text-slate-600' : 'text-slate-300'
               }`}>
               Ahmedabad, India
             </p>
@@ -90,7 +90,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={({ isActive }) => `
-                text-[10px] font-black uppercase tracking-[0.15em] transition-all hover:text-orange-600
+                text-[11px] font-black uppercase tracking-[0.15em] transition-all hover:text-orange-600
                 ${isActive ? 'text-orange-600' : scrolled ? 'text-slate-700' : 'text-white/90 hover:text-white'}
               `}
             >
@@ -104,7 +104,7 @@ const Navbar = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className={`flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.15em] transition-all ${scrolled ? 'text-slate-700' : 'text-white/90'
+            <button className={`flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.15em] transition-all ${scrolled ? 'text-slate-700' : 'text-white/90'
               } group-hover:text-orange-600`}>
               Resources <ChevronDown size={12} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
@@ -117,7 +117,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className="block px-6 py-3 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:bg-slate-50 hover:text-orange-600 transition-all"
+                    className="block px-6 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-slate-50 hover:text-orange-600 transition-all"
                   >
                     {link.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{link.name.slice(2)}</> : link.name}
                   </Link>
@@ -127,7 +127,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <Link to="/enquiry" className={`px-6 py-2.5 text-[10px] font-black uppercase tracking-widest transition-all flex items-center gap-2 ${scrolled
+          <Link to="/enquiry" className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all flex items-center gap-2 ${scrolled
               ? 'bg-blue-900 text-white hover:bg-orange-600 shadow-lg'
               : 'bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white hover:text-slate-900'
             }`}>
@@ -164,7 +164,7 @@ const Navbar = () => {
 
           {/* Mobile Resource Section */}
           <div className="w-full border-t border-white/10 pt-6 flex flex-col items-center space-y-4">
-            <p className="text-orange-600 text-[10px] font-black uppercase tracking-[0.3em]">Quick Resources</p>
+            <p className="text-orange-600 text-[11px] font-black uppercase tracking-[0.3em]">Quick Resources</p>
             {resourceLinks.map((link) => (
               <Link
                 key={link.name}

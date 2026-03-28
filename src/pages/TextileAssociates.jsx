@@ -7,7 +7,7 @@ const TextileAssociates = () => {
     <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Network & Reach</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Network & Reach</span>
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 mb-6">
             Our Textile <span className="text-slate-400">Associates</span>
           </h1>
@@ -30,7 +30,7 @@ const TextileAssociates = () => {
                <Globe2 size={24} />
              </div>
              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-3">Nationwide Reach</h3>
-             <p className="text-slate-500 text-sm leading-relaxed">Our associates are spread across key cities in India, ensuring prompt delivery and top-notch services no matter your location.</p>
+             <p className="text-slate-600 text-sm leading-relaxed">Our associates are spread across key cities in India, ensuring prompt delivery and top-notch services no matter your location.</p>
            </div>
            
            <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-all group">
@@ -38,7 +38,7 @@ const TextileAssociates = () => {
                <Target size={24} />
              </div>
              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-3">Quality Partners</h3>
-             <p className="text-slate-500 text-sm leading-relaxed">We partner with the best in the industry to bring you unparalleled fabric quality, expert craftsmanship, and reliable output consistently.</p>
+             <p className="text-slate-600 text-sm leading-relaxed">We partner with the best in the industry to bring you unparalleled fabric quality, expert craftsmanship, and reliable output consistently.</p>
            </div>
            
            <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-all group">
@@ -46,7 +46,7 @@ const TextileAssociates = () => {
                <MapPin size={24} />
              </div>
              <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mb-3">Seamless <span className="lowercase">e-</span>Trade</h3>
-             <p className="text-slate-500 text-sm leading-relaxed">Leverage our <span className="lowercase">e-</span>trade capabilities across our associate network for quick, transparent, and hassle-free transactions.</p>
+             <p className="text-slate-600 text-sm leading-relaxed">Leverage our <span className="lowercase">e-</span>trade capabilities across our associate network for quick, transparent, and hassle-free transactions.</p>
            </div>
         </div>
       </div>

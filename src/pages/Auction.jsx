@@ -7,11 +7,11 @@ const Auction = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Inventory Liquidation</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Inventory Liquidation</span>
             <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900"><span className="lowercase">e-</span>Auction <span className="text-slate-400">Portal.</span></h1>
           </div>
           <div className="flex gap-4">
-            <div className="bg-green-100 text-green-700 px-4 py-2 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+            <div className="bg-green-100 text-green-700 px-4 py-2 text-[11px] font-black uppercase tracking-widest flex items-center gap-2">
               <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span> Live Now
             </div>
           </div>
@@ -53,10 +53,10 @@ const Auction = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-blue-900 text-white px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-orange-600 transition-all flex items-center gap-3">
+                <button className="bg-blue-900 text-white px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-orange-600 transition-all flex items-center gap-3">
                   <Hammer size={16} /> Place Bid Now
                 </button>
-                <button className="border border-slate-200 text-slate-900 px-10 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-slate-100 transition-all">
+                <button className="border border-slate-200 text-slate-900 px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-slate-100 transition-all">
                   Download Specs (PDF)
                 </button>
               </div>

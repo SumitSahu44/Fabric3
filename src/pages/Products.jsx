@@ -24,7 +24,7 @@ const Products = () => {
         
         {/* Header Section */}
         <div className="mb-12">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-orange-600 mb-2 block">Our Collection</span>
+          <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange-600 mb-2 block">Our Collection</span>
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">
             Cotton & <span className="text-slate-400">Products.</span>
           </h1>
@@ -36,7 +36,7 @@ const Products = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`text-[10px] font-black uppercase tracking-widest px-4 py-2 transition-all ${
+              className={`text-[11px] font-black uppercase tracking-widest px-4 py-2 transition-all ${
                 filter === cat ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-900'
               }`}
             >
@@ -72,7 +72,7 @@ const Products = () => {
                     <p className="text-[9px] font-bold text-orange-600 uppercase tracking-widest mb-1">{product.cat}</p>
                     <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{product.name}</h3>
                   </div>
-                  <button className="text-[10px] font-bold uppercase border-b border-slate-900 pb-1">Enquire</button>
+                  <button className="text-[11px] font-bold uppercase border-b border-slate-900 pb-1">Enquire</button>
                 </div>
               </motion.div>
             ))}

@@ -17,7 +17,7 @@ const Footer = () => {
             <h2 className="text-2xl font-black tracking-tighter uppercase italic">
               Parekh <span className="text-orange-600">Fabrics.</span>
             </h2>
-            <p className="text-[10px] leading-relaxed font-bold uppercase tracking-[0.2em] text-slate-500 max-w-xs">
+            <p className="text-[11px] leading-relaxed font-bold uppercase tracking-[0.2em] text-slate-600 max-w-xs">
               Manufacturers & Global Suppliers of Premium Cotton & Industrial Fabrics based in Ahmedabad, Gujarat.
             </p>
             <div className="flex gap-4 pt-4">
@@ -41,7 +41,7 @@ const Footer = () => {
                 { name: 'Career', path: '/career' }
               ].map((item) => (
                 <li key={item.name}>
-                  <Link to={item.path} className="text-[10px] font-bold tracking-widest text-slate-400 hover:text-white flex items-center gap-2 group">
+                  <Link to={item.path} className="text-[11px] font-bold tracking-widest text-slate-400 hover:text-white flex items-center gap-2 group">
                     <ArrowUpRight size={10} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     {item.name}
                   </Link>
@@ -55,18 +55,18 @@ const Footer = () => {
             <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">Contact Desk</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin size={14} className="text-slate-500 mt-1" />
-                <p className="text-[10px] font-bold uppercase tracking-widest leading-loose text-slate-400">
+                <MapPin size={14} className="text-slate-600 mt-1" />
+                <p className="text-[11px] font-bold uppercase tracking-widest leading-loose text-slate-400">
                   GIDC Vatva, Phase IV, <br /> Ahmedabad, GJ 382445
                 </p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={14} className="text-slate-500" />
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">+91 79 2583 XXXX</p>
+                <Phone size={14} className="text-slate-600" />
+                <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">+91 79 2583 XXXX</p>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={14} className="text-slate-500" />
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">info@parekhfabrics.com</p>
+                <Mail size={14} className="text-slate-600" />
+                <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">info@parekhfabrics.com</p>
               </div>
             </div>
           </div>

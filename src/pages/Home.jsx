@@ -22,14 +22,14 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-16 items-center">
             <div className="lg:col-span-1">
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">Manufacturing Edge</span>
+              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">Manufacturing Edge</span>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-none mb-6">
                 Why B2B Leaders <br /> <span className="text-slate-400">Trust Us.</span>
               </h2>
-              <p className="text-xs text-slate-500 uppercase tracking-widest leading-relaxed font-bold">
+              <p className="text-xs text-slate-600 uppercase tracking-widest leading-relaxed font-bold">
                 From Ahmedabad to the World, we provide end-to-end textile solutions with zero compromise on quality.
               </p>
-              <Link to="/about" className="mt-10 inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 border-b-2 border-orange-600 pb-2 hover:text-orange-600 transition-colors">
+              <Link to="/about" className="mt-10 inline-flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-900 border-b-2 border-orange-600 pb-2 hover:text-orange-600 transition-colors">
                 Learn Legacy <ArrowRight size={14} />
               </Link>
             </div>
@@ -39,7 +39,7 @@ const Home = () => {
                 <div key={idx} className="p-8 border border-slate-50 bg-slate-50/50 hover:bg-white hover:shadow-2xl transition-all group">
                   <item.icon className="text-slate-400 group-hover:text-orange-600 transition-colors mb-6" size={24} strokeWidth={1.5} />
                   <h4 className="text-sm font-black uppercase tracking-tight text-slate-900 mb-2">{item.title}</h4>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest leading-loose">{item.desc}</p>
+                  <p className="text-[11px] text-slate-600 uppercase tracking-widest leading-loose">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -55,7 +55,7 @@ const Home = () => {
               <h2 className="text-3xl font-black uppercase tracking-tighter italic">Our Core Verticals</h2>
               <p className="text-[9px] font-bold text-orange-500 uppercase tracking-[0.3em] mt-2">Certified Industrial Grade Fabrics</p>
             </div>
-            <Link to="/products" className="text-[10px] font-black uppercase tracking-widest border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all">
+            <Link to="/products" className="text-[11px] font-black uppercase tracking-widest border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition-all">
               Full Catalogue
             </Link>
           </div>
@@ -93,7 +93,7 @@ const Home = () => {
       {/* 4. Core Features Grid (The one you had, but styled better) */}
       <section className="py-24 bg-slate-50 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block"><span className="lowercase">e-</span>Service Hub</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block"><span className="lowercase">e-</span>Service Hub</span>
           <h2 className="text-3xl font-black uppercase tracking-tighter text-blue-900 mb-16">Digital Procurement.</h2>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">

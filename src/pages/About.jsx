@@ -19,7 +19,7 @@ const About = () => {
           <motion.span 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-[10px] font-bold uppercase tracking-[0.4em] text-orange-600 block mb-3"
+            className="text-[11px] font-bold uppercase tracking-[0.4em] text-orange-600 block mb-3"
           >
             Since 1999 • Ahmedabad
           </motion.span>
@@ -64,7 +64,7 @@ const About = () => {
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
               Parekh Fabrics is dedicated to the production of high-grade cotton materials. We specialize in industrial-scale supplies, ensuring that every meter of fabric meets international durability and texture standards.
             </p>
-            <p className="text-sm text-slate-500 leading-relaxed italic">
+            <p className="text-sm text-slate-600 leading-relaxed italic">
               "Based in Ahmedabad, the textile heart of India, we combine traditional spinning techniques with modern automated looms."
             </p>
             
@@ -85,7 +85,7 @@ const About = () => {
       <section className="py-20 bg-slate-50 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.3em] text-orange-600 mb-2">Leadership</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange-600 mb-2">Leadership</h2>
             <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Our Management</h3>
           </div>
 

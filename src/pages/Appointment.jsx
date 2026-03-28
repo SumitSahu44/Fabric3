@@ -29,7 +29,7 @@ const Appointment = () => (
             </select>
           </div>
         </div>
-        <button className="w-full bg-slate-900 text-white py-4 font-black uppercase text-[10px] tracking-[0.3em] hover:bg-orange-600 transition-all">Schedule Visit</button>
+        <button className="w-full bg-slate-900 text-white py-4 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all">Schedule Visit</button>
       </form>
     </div>
   </div>

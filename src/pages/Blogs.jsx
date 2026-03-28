@@ -22,7 +22,7 @@ const Blogs = () => {
               <span className="text-[9px] font-black text-orange-600 uppercase tracking-[0.2em]">{p.tag}</span>
               <h3 className="text-xl font-black uppercase tracking-tight text-slate-900 mt-2 mb-4 group-hover:text-blue-900 transition-colors">{p.title}</h3>
               <div className="flex items-center gap-4">
-                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{p.date}</span>
+                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">{p.date}</span>
                  <ArrowRight size={14} className="text-slate-300 group-hover:translate-x-2 transition-transform" />
               </div>
             </div>

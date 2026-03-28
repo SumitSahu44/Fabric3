@@ -8,11 +8,11 @@ const AssociatesMap = () => {
     <section className="py-24 bg-slate-900 text-white px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
         <div className="md:w-1/2">
-          <span className="text-orange-500 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">National Network</span>
+          <span className="text-orange-500 font-black uppercase text-[11px] tracking-[0.4em] mb-4 block">National Network</span>
           <h2 className="text-4xl font-black uppercase tracking-tighter mb-8">Our Textile <br />Associates.</h2>
           <div className="grid grid-cols-2 gap-4">
             {centers.map(c => (
-              <div key={c} className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+              <div key={c} className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-slate-400">
                 <MapPin size={14} className="text-orange-600" /> {c} Center
               </div>
             ))}
