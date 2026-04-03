@@ -22,26 +22,28 @@ const Navbar = () => {
     setIsDropdownOpen(false);
   }, [location]);
 
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Products', path: '/products' },
-    { name: 'E-Auction', path: '/auction' },
-    { name: 'trade & contracts', path: '/tender-contracts' },
-    { name: 'Career', path: '/career' },
-  ];
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
+  { name: 'Contact Us', path: '/contact' },
+  { name: 'Products', path: '/products' }, // Cotton & its Products
+  { name: 'Product Gallery', path: '/product-gallery' },
+  { name: 'Management', path: '/management' },
 
-  const resourceLinks = [
-    { name: 'Management', path: '/management' },
-    { name: 'Media & Events', path: '/media-events' },
-    { name: 'E-Quotation', path: '/equotation' },
-    { name: 'Customer Reviews', path: '/reviews' },
-    { name: 'Circulars', path: '/circular' },
-    { name: 'Textile Associates', path: '/associates' },
-    { name: 'Blogs', path: '/blogs' },
-    { name: 'Appointment', path: '/appointment' },
-    { name: 'Contact', path: '/contact' },
-  ];
+];
+
+ const resourceLinks = [
+  { name: 'E-Quotation', path: '/equotation' },
+  { name: 'E-Auction', path: '/auction' },
+  { name: 'Tender & Contract', path: '/tender-contracts' },
+  { name: 'Career', path: '/career' },
+  { name: 'Circular', path: '/circular' },
+  { name: 'Blog', path: '/blogs' },
+  { name: 'Customer Review', path: '/reviews' },
+  { name: 'Visit Appointment', path: '/appointment' }, // e-Form
+  { name: 'Media Gallery', path: '/media-events' },
+  { name: 'Textile Associates', path: '/associates' },
+];
 
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled

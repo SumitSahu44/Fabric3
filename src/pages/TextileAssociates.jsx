@@ -6,7 +6,7 @@ const TextileAssociates = () => {
   return (
     <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Network & Reach</span>
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 mb-6">
             Our Textile <span className="text-slate-400">Associates</span>
@@ -17,7 +17,7 @@ const TextileAssociates = () => {
         </div>
 
         {/* Map Container */}
-        <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden p-6 md:p-12 mb-16 border border-slate-100 flex justify-center items-center">
+        <div className="bg-white rounded-[2rem] overflow-hidden mb-16  flex justify-center items-center">
           <div className="w-full max-w-4xl">
             <MapPointerPolished />
           </div>
