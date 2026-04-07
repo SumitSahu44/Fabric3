@@ -1,74 +1,95 @@
 import React from 'react';
-import { Timer, Hammer, CheckCircle } from 'lucide-react';
+import { Timer, Hammer, CheckCircle, Upload, Send, FileText } from 'lucide-react';
 
 const Auction = () => {
   return (
     <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div>
-            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Inventory Liquidation</span>
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900"><span className="lowercase">e-</span>Auction <span className="text-slate-400">Portal.</span></h1>
-          </div>
-          <div className="flex gap-4">
-            <div className="bg-green-100 text-green-700 px-4 py-2 text-[11px] font-black uppercase tracking-widest flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span> Live Now
-            </div>
-          </div>
+        
+    
+
+     <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
+  <div className="max-w-4xl mx-auto">
+    
+    {/* Heading Centered */}
+    <div className="text-center mb-12">
+      <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Inventory Liquidation</span>
+      <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 mb-4">
+        <span className="lowercase">e-</span>Auction <span className="text-slate-400">Portal.</span>
+      </h1>
+      <div className="flex justify-center">
+        <div className="bg-green-100 text-green-700 px-4 py-2 text-[11px] font-black uppercase tracking-widest flex items-center gap-2">
+          <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span> Registration Live
         </div>
+      </div>
+    </div>
 
-        {/* Auction Card */}
-        <div className="bg-white border border-slate-200 overflow-hidden shadow-sm">
-          <div className="grid md:grid-cols-3">
-            <div className="md:col-span-1 h-64 md:h-auto bg-slate-200">
-              <img src="https://images.unsplash.com/photo-1569616724771-7abf027deca4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFicmljJTIwYjJifGVufDB8fDB8fHww" className="w-full h-full object-cover grayscale" alt="Auction Item" />
-            </div>
-            <div className="md:col-span-2 p-8 md:p-12">
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Surplus Raw Cotton Batch #402</h3>
-                  <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mt-1">Lot Size: 5000 KG • Grade: A+</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Current Bid</p>
-                  <p className="text-2xl font-black text-orange-600 tracking-tighter">₹ 4,50,000</p>
-                </div>
-              </div>
+    {/* Form Centered with optimized width */}
+    <div className="max-w-2xl mx-auto bg-white p-8 md:p-12 shadow-2xl border border-slate-100 rounded-2xl">
+      <div className="flex items-center justify-center gap-3 mb-10 border-b border-slate-100 pb-6">
+        <Hammer size={20} className="text-orange-600" />
+        <h3 className="text-xl font-black uppercase tracking-tighter text-slate-900">Bidder Registration</h3>
+      </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 py-6 border-y border-slate-100 mb-8">
-                <div>
-                  <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Time Remaining</p>
-                  <div className="flex items-center gap-2 font-black text-slate-900 uppercase text-xs">
-                    <Timer size={14} className="text-orange-600" /> 04h : 22m : 10s
-                  </div>
-                </div>
-                <div>
-                  <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Total Bids</p>
-                  <div className="font-black text-slate-900 uppercase text-xs">24 Active Bids</div>
-                </div>
-                <div className="hidden md:block">
-                  <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Next Minimum Bid</p>
-                  <div className="font-black text-slate-900 uppercase text-xs">₹ 4,55,000</div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-blue-900 text-white px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-orange-600 transition-all flex items-center gap-3">
-                  <Hammer size={16} /> Place Bid Now
-                </button>
-                <button className="border border-slate-200 text-slate-900 px-10 py-4 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-slate-100 transition-all">
-                  Download Specs (PDF)
-                </button>
-              </div>
-            </div>
+      <form className="space-y-7">
+        {/* Row 1: Participant & Legal Name */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+            <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Participant</label>
+            <input type="text" placeholder="Full Name" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
+          </div>
+          <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+            <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Legal Name of the Business</label>
+            <input type="text" placeholder="Company Name" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
           </div>
         </div>
 
-        {/* Security Note */}
-        <div className="mt-8 flex items-center gap-3 text-slate-400">
-           <CheckCircle size={16} className="text-green-600" />
-           <p className="text-[9px] font-bold uppercase tracking-widest italic">All auctions are verified and secure under Parekh Fabrics B2B Terms.</p>
+        {/* Row 2: Address */}
+        <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+          <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Business Address with Pin code</label>
+          <input type="text" placeholder="Complete Address & Pincode" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
         </div>
+
+        {/* Row 3: GST & Mobile */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+            <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">GST No.</label>
+            <input type="text" placeholder="GSTIN Number" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
+          </div>
+          <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+            <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mobile No.</label>
+            <input type="tel" placeholder="+91 00000 00000" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
+          </div>
+        </div>
+
+        {/* Row 4: Email */}
+        <div className="border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
+          <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email Id</label>
+          <input type="email" placeholder="trade@company.com" className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
+        </div>
+
+        {/* Row 5: Upload GST Certificate */}
+        <div className="relative border-2 border-dashed border-slate-200 p-8 rounded-xl hover:border-orange-600 transition-all group flex flex-col items-center justify-center gap-3">
+          <input type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+          <Upload size={24} className="text-slate-400 group-hover:text-orange-600" />
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Upload GST Certificate (PDF/JPG)</p>
+        </div>
+
+        <button className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-orange-600 transition-all shadow-xl rounded-lg">
+          Register & Place Bid <Send size={14} />
+        </button>
+      </form>
+    </div>
+
+    {/* Security Note Centered */}
+    <div className="mt-12 flex items-center justify-center gap-3 text-slate-400">
+       <CheckCircle size={16} className="text-green-600" />
+       <p className="text-[9px] font-bold uppercase tracking-widest italic">All auctions are verified and secure under Parekh Fabrics B2B Terms.</p>
+    </div>
+  </div>
+</div>
+
+      
       </div>
     </div>
   );

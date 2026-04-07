@@ -5,47 +5,59 @@ import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const expertises = [
-    { icon: Factory, title: "In-House Spinning", desc: "Advanced spinning units for high-tensile cotton yarn." },
-    { icon: ShieldCheck, title: "Quality Assurance", desc: "4-point inspection system for every meter of fabric." },
-    { icon: Truck, title: "Global Logistics", desc: "Seamless export documentation and port delivery." },
-    { icon: Zap, title: "Fast Turnaround", desc: "Bulk production within tight industrial deadlines." },
-  ];
+
 
   return (
     <main className="w-full">
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Industrial Expertise (Why Choose Us) */}
-      <section className="py-24 bg-white px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-16 items-center">
-            <div className="lg:col-span-1">
-              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">Manufacturing Edge</span>
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-none mb-6">
-                Why B2B Leaders <br /> <span className="text-slate-400">Trust Us.</span>
-              </h2>
-              <p className="text-xs text-slate-600 uppercase tracking-widest leading-relaxed font-bold">
-                From Ahmedabad to the World, we provide end-to-end textile solutions with zero compromise on quality.
-              </p>
-              <Link to="/about" className="mt-10 inline-flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-900 border-b-2 border-orange-600 pb-2 hover:text-orange-600 transition-colors">
-                Learn Legacy <ArrowRight size={14} />
-              </Link>
-            </div>
-            
-            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-              {expertises.map((item, idx) => (
-                <div key={idx} className="p-8 border border-slate-50 bg-slate-50/50 hover:bg-white hover:shadow-2xl transition-all group">
-                  <item.icon className="text-slate-400 group-hover:text-orange-600 transition-colors mb-6" size={24} strokeWidth={1.5} />
-                  <h4 className="text-sm font-black uppercase tracking-tight text-slate-900 mb-2">{item.title}</h4>
-                  <p className="text-[11px] text-slate-600 uppercase tracking-widest leading-loose">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+   {/* 2. Industrial Expertise (Why Choose Us) */}
+<section className="py-24 bg-white px-6">
+  <div className="max-w-6xl mx-auto">
+    {/* flex-row-reverse ensures Heading is on the Right and Para is on the Left on Large Screens */}
+    <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
+      
+      {/* RIGHT SIDE: Heading Section */}
+      <div className="lg:w-1/2 text-left lg:text-right">
+        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">
+          Manufacturing Edge
+        </span>
+        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9] mb-6">
+          Why B2B Leaders <br /> 
+          <span className="text-slate-400">Trust Us.</span>
+        </h2>
+        <div className="h-1 w-20 bg-orange-600 ml-0 lg:ml-auto mb-6"></div> {/* Decorative line */}
+      </div>
+
+      {/* LEFT SIDE: Paragraph Section */}
+      <div className="lg:w-1/2">
+        <div className="relative">
+          {/* Subtle Quote Icon or Design Element */}
+          <span className="absolute -top-6 -left-4 text-6xl text-slate-100 font-serif">“</span>
+          
+          <p className="text-[15px] md:text-[17px] text-slate-600 leading-relaxed font-medium text-justify relative z-10">
+            <strong className="text-slate-900">Parekh Fabrics</strong> Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
+quality of the Cotton Fabrics and its Products, from lower range to higher range
+with different TC at reasonable and low price range with best and premium
+quality, with Quality Assurance and a Quality Seal.
+          
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 lg:justify-start">
+             <div className="px-4 py-2 border border-slate-200 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-500">
+               Direct Factory Rates
+             </div>
+             <div className="px-4 py-2 border border-slate-200 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-500">
+               Quality Certified
+             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* 3. Featured Categories (Visual Preview) */}
       <section className="py-24 bg-slate-900 text-white px-6 overflow-hidden">
