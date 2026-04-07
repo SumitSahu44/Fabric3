@@ -16,13 +16,7 @@ const About = () => {
       {/* Small Header Section */}
       <section className="pt-32 pb-16 px-6 border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-[11px] font-bold uppercase tracking-[0.4em] text-orange-600 block mb-3"
-          >
-            Since 1999 • Ahmedabad
-          </motion.span>
+        
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-tight">
             Our Legacy in <br /> 
             <span className="text-slate-400">Cotton Manufacturing.</span>
@@ -62,21 +56,15 @@ const About = () => {
               Manufacturing Excellence
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              Parekh Fabrics is dedicated to the production of high-grade cotton materials. We specialize in industrial-scale supplies, ensuring that every meter of fabric meets international durability and texture standards.
+             Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
+quality of the Cotton Fabrics and its Products, from lower range to higher range
+with different TC at reasonable and low price range with best and premium
+quality, with Quality Assurance and a Quality Seal.
+
             </p>
-            <p className="text-sm text-slate-600 leading-relaxed italic">
-              "Based in Ahmedabad, the textile heart of India, we combine traditional spinning techniques with modern automated looms."
-            </p>
+          
             
-            {/* Minimal Stats Grid */}
-            <div className="grid grid-cols-2 gap-y-8 gap-x-4 pt-8 border-t border-slate-100">
-              {stats.map((stat, i) => (
-                <div key={i}>
-                  <p className="text-lg font-black text-slate-900 tracking-tighter">{stat.value}</p>
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+         
           </div>
         </div>
       </section>

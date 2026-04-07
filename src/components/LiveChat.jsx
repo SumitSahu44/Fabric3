@@ -33,7 +33,7 @@ const LiveChat = () => {
       setIsTyping(false);
       const botMsg = { 
         id: Date.now() + 1, 
-        text: "Thank you for your query. Our B2B export department will review your request. For urgent trade matters, please call +91 79 2583 XXXX.", 
+        text: "Thank you for your query. Our B2B export department will review your request. For urgent trade matters, please call 6353778329.", 
         sender: 'bot' 
       };
       setMessages(prev => [...prev, botMsg]);

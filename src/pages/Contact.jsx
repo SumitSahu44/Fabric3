@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Direct Line",
-      detail: "+91 79 2583 XXXX / +91 98XXX XXXXX",
+      detail: "6353778329 ",
       color: "text-blue-900"
     },
     {
