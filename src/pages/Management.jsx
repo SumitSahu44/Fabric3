@@ -9,22 +9,24 @@ const Management = () => {
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 px-6">
-      <div className="max-w-5xl mx-auto">
-        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4 text-center">Leadership</span>
-        <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 text-center mb-16">Our Management.</h1>
-        <div className="grid md:grid-cols-2 gap-12">
-          {team.map((m, i) => (
-            <div key={i} className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 border border-slate-100">
-              <img src={m.img} className="w-32 h-32 rounded-full object-cover grayscale border-4 border-white shadow-xl" alt={m.name} />
-              <div>
-                <h3 className="text-xl font-black uppercase tracking-tight text-slate-900">{m.name}</h3>
-                <p className="text-orange-600 text-[11px] font-bold uppercase tracking-widest mt-1 mb-4">{m.role}</p>
-                <p className="text-xs text-slate-600 uppercase tracking-tighter leading-relaxed">{m.bio}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="max-w-6xl mx-auto px-6 py-16">
+  {/* Header Section */}
+  <div className="text-center mb-20">
+    <span className="text-[11px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-3">
+      Leadership
+    </span>
+    <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 mb-6">
+      Our <span className="text-slate-400">Management.</span>
+    </h1>
+    <div className="w-24 h-1 bg-orange-600 mx-auto mb-8"></div>
+    <p className="max-w-2xl mx-auto text-sm md:text-base text-slate-600 font-medium leading-relaxed">
+      Parekh Fabrics is administered and governed by a highly skilled, experienced, and qualified 
+      management team dedicated to excellence in the textile industry.
+    </p>
+  </div>
+
+
+</div>
     </div>
   );
 };

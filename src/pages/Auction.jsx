@@ -67,12 +67,12 @@ const Auction = () => {
         <div className="bg-white border border-slate-200 overflow-hidden shadow-sm p-8 md:p-14">
           <div className="flex justify-between items-start mb-10 border-b border-slate-100 pb-6">
             <div>
-              <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Participation Request</h3>
+              <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Participation Request <span className="text-orange-600 block text-xs mt-1">(e-Form)</span></h3>
               <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mt-2">Register your interest for upcoming batches.</p>
             </div>
             <div className="text-right flex items-center gap-3">
               <Mail size={16} className="text-orange-600" />
-              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">services@parekhfabrics.com</p>
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest lowercase">services@parekhfabrics.com</p>
             </div>
           </div>
 
@@ -103,19 +103,19 @@ const Auction = () => {
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Participant *</label>
                   <input type="text" {...register("participantName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Your Name" />
-                  {errors.participantName && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.participantName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Legal Name of the Business *</label>
                   <input type="text" {...register("legalBusinessName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Company Name" />
-                  {errors.legalBusinessName && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.legalBusinessName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
               <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                 <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Business Address with Pin code *</label>
                 <input type="text" {...register("businessAddress", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Complete Address" />
-                {errors.businessAddress && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                {errors.businessAddress && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
               </div>
 
               <div className="grid md:grid-cols-3 gap-10">
@@ -126,30 +126,33 @@ const Auction = () => {
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mobile No. *</label>
                   <input type="tel" {...register("mobileNo", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="+91" />
-                  {errors.mobileNo && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.mobileNo && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email Id *</label>
+                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email id *</label>
                   <input type="email" {...register("email", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="email@address" />
-                  {errors.email && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.email && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-10">
-                <div className="relative pb-2 focus-within:border-orange-600 transition-all flex flex-col justify-end">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Upload GST Certificate</label>
-                  <input type="file" {...register("gstCertificate")} className="w-full text-xs font-bold text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-900 file:text-white hover:file:bg-orange-600 cursor-pointer transition-all" />
-                </div>
+              <div className="relative pb-2 focus-within:border-orange-600 transition-all flex flex-col justify-end">
+                <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2 leading-none">Upload GST Certificate</label>
+                <input type="file" {...register("gstCertificate")} className="w-full text-xs font-bold text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-900 file:text-white hover:file:bg-orange-600 cursor-pointer transition-all" />
               </div>
 
               <div className="pt-6">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full md:w-auto bg-slate-900 text-white px-12 py-5 font-black uppercase text-[11px] tracking-[0.2em] hover:bg-orange-600 transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed shadow-xl"
                 >
                   {loading ? "Submitting..." : "Submit"} <Hammer size={16} />
                 </button>
+                <div className="mt-8 text-center border-t border-slate-50 pt-8">
+                  <a href="mailto:services@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
+                  services@parekhfabrics.com
+                  </a>
+                </div>
               </div>
             </form>
           )}

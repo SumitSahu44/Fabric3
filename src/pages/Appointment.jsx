@@ -52,24 +52,23 @@ const Appointment = () => {
     <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Corporate Office</span>
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">Visit with <span className="text-slate-400">Appointment</span></h1>
-            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs mt-4">( e-Form )</p>
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Corporate Office</span>
+          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">Visit with <span className="text-slate-400">Appointment</span> <span className="text-orange-600 block text-xs mt-2 uppercase">(e-Form)</span></h1>
         </div>
 
         <div className="bg-white p-8 md:p-14 shadow-2xl border-t-4 border-orange-600">
           <div className="flex justify-between items-center mb-10 border-b border-slate-100 pb-6">
-             <h2 className="text-xl font-black uppercase tracking-tighter text-slate-900">Book Appointment</h2>
-             <div className="text-right flex items-center gap-2">
-               <Mail size={14} className="text-orange-600" />
-               <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">appointment@parekhfabrics.com</span>
-             </div>
+            <h2 className="text-xl font-black uppercase tracking-tighter text-slate-900 leading-none">Book Appointment</h2>
+            <div className="text-right flex items-center gap-2">
+              <Mail size={14} className="text-orange-600" />
+              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest lowercase">appointment@parekhfabrics.com</span>
+            </div>
           </div>
 
           {isSubmitted ? (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }} 
-              animate={{ opacity: 1, scale: 1 }} 
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
               className="flex flex-col items-center justify-center text-center py-12"
             >
@@ -85,39 +84,39 @@ const Appointment = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" encType="multipart/form-data">
               {errorMsg && (
                 <div className="p-4 bg-red-50 text-red-600 text-xs font-bold uppercase tracking-widest border-l-4 border-red-500">
-                    {errorMsg}
+                  {errorMsg}
                 </div>
               )}
-              
+
               <div className="grid md:grid-cols-2 gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Visitor *</label>
                   <input type="text" {...register("visitorName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Enter full name" />
-                  {errors.visitorName && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.visitorName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Business *</label>
                   <input type="text" {...register("businessName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Enter company name" />
-                  {errors.businessName && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.businessName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
               <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                 <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Visitor Address with Pin code *</label>
                 <input type="text" {...register("visitorAddress", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Complete address including pincode" />
-                {errors.visitorAddress && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                {errors.visitorAddress && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
               </div>
 
               <div className="grid md:grid-cols-2 gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mobile No. *</label>
                   <input type="tel" {...register("mobileNo", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="+91" />
-                  {errors.mobileNo && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.mobileNo && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                   <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email Id *</label>
                   <input type="email" {...register("email", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="your@email.com" />
-                  {errors.email && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.email && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
@@ -130,28 +129,33 @@ const Appointment = () => {
                     <option value="ECI Card">ECI Card</option>
                     <option value="DL">DL</option>
                   </select>
-                  {errors.proofType && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                  {errors.proofType && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
                 <div className="relative pb-2 focus-within:border-orange-600 transition-all flex flex-col justify-end">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Upload Residential / Business Proof</label>
-                  <input type="file" {...register("proofFile")} className="w-full text-xs font-bold text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-900 file:text-white hover:file:bg-orange-600 cursor-pointer transition-all" />
+                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1 leading-none">Upload Residential / Business Proof</label>
+                  <input type="file" {...register("proofFile")} className="w-full text-[10px] font-bold text-slate-500 file:mr-4 file:py-1 file:px-3 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-100 file:text-slate-900 hover:file:bg-orange-600 hover:file:text-white cursor-pointer transition-all" />
                 </div>
               </div>
 
               <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
                 <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Describe the reason for Visit *</label>
                 <textarea rows="4" {...register("reasonForVisit", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase resize-none" placeholder="Provide details here..."></textarea>
-                {errors.reasonForVisit && <span className="text-red-500 text-[9px] uppercase tracking-widest font-black absolute bottom-0 right-0 py-2">Required</span>}
+                {errors.reasonForVisit && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
               </div>
 
               <div className="pt-6">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={loading}
-                  className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-xl"
                 >
                   {loading ? "Submitting..." : "Submit"}
                 </button>
+                <div className="mt-6 text-center">
+                  <a href="mailto:appointment@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
+                  appointment@parekhfabrics.com
+                  </a>
+                </div>
               </div>
             </form>
           )}
