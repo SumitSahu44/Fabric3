@@ -1,22 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Search } from 'lucide-react';
+import { ArrowUpRight, Search, Loader2 } from 'lucide-react';
+import { productApi } from '../utils/api';
+
+const staticProductData = [
+  { id: 1, name: 'Premium Organic Cotton', cat: 'Pure Cotton', img: 'https://plus.unsplash.com/premium_photo-1770294856128-b4325ae5c7f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UHJlbWl1bSUyME9yZ2FuaWMlMjBDb3R0b24lMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D' },
+  { id: 2, name: 'Heavy Duty Canvas', cat: 'Industrial', img: 'https://images.unsplash.com/photo-1619459075136-2b53c6153d4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SGVhdnklMjBEdXR5JTIwQ2FudmFzJTIwZmFicmljfGVufDB8fDB8fHww' },
+  { id: 3, name: 'Cotton Slub Yarn', cat: 'Yarn', img: 'https://images.unsplash.com/photo-1757382603782-839864de55d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENvdHRvbiUyMFNsdWIlMjBZYXJuJTIwZmFicmljfGVufDB8fDB8fHww' },
+  { id: 4, name: 'Indigo Dyed Fabric', cat: 'Dyed', img: 'https://images.unsplash.com/photo-1761808070278-dd73772be230?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEluZGlnbyUyMER5ZWQlMjBGYWJyaWN8ZW58MHx8MHx8fDA%3D' },
+];
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState(['All']);
   const [filter, setFilter] = useState('All');
+  const [loading, setLoading] = useState(true);
 
-  const categories = ['All', 'Pure Cotton', 'Industrial', 'Yarn', 'Dyed'];
-  
-  const productData = [
-    { id: 1, name: 'Premium Organic Cotton', cat: 'Pure Cotton', img: 'https://plus.unsplash.com/premium_photo-1770294856128-b4325ae5c7f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UHJlbWl1bSUyME9yZ2FuaWMlMjBDb3R0b24lMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D' },
-    { id: 2, name: 'Heavy Duty Canvas', cat: 'Industrial', img: 'https://images.unsplash.com/photo-1619459075136-2b53c6153d4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SGVhdnklMjBEdXR5JTIwQ2FudmFzJTIwZmFicmljfGVufDB8fDB8fHww' },
-    { id: 3, name: 'Cotton Slub Yarn', cat: 'Yarn', img: 'https://images.unsplash.com/photo-1757382603782-839864de55d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENvdHRvbiUyMFNsdWIlMjBZYXJuJTIwZmFicmljfGVufDB8fDB8fHww' },
-    { id: 4, name: 'Indigo Dyed Fabric', cat: 'Dyed', img: 'https://images.unsplash.com/photo-1761808070278-dd73772be230?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEluZGlnbyUyMER5ZWQlMjBGYWJyaWN8ZW58MHx8MHx8fDA%3D' },
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await productApi.getAll('ParekhFabrics06');
+        if (response.data.success && response.data.data.length > 0) {
+          const dynamicProducts = response.data.data.map(p => ({
+            id: p._id,
+            name: p.title,
+            cat: p.category,
+            img: `http://localhost:5000/${p.image}`
+          }));
+          setProducts(dynamicProducts);
+          const uniqueCats = ['All', ...new Set(dynamicProducts.map(i => i.cat))];
+          setCategories(uniqueCats);
+        } else {
+          setProducts(staticProductData);
+          setCategories(['All', 'Pure Cotton', 'Industrial', 'Yarn', 'Dyed']);
+        }
+      } catch (error) {
+        console.error("Products fetch error:", error);
+        setProducts(staticProductData);
+        setCategories(['All', 'Pure Cotton', 'Industrial', 'Yarn', 'Dyed']);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const filteredProducts = filter === 'All' 
-    ? productData 
-    : productData.filter(p => p.cat === filter);
+    ? products 
+    : products.filter(p => p.cat === filter);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white pt-20">
+        <Loader2 className="animate-spin text-orange-600" size={40} />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white min-h-screen pt-28 pb-20 px-6">
@@ -61,7 +100,7 @@ const Products = () => {
                   <img 
                     src={product.img} 
                     alt={product.name} 
-                    className="w-full h-full object-cover transition-all duration-700"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   />
                   <div className="absolute top-4 right-4 bg-white p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <ArrowUpRight size={16} className="text-slate-900" />
@@ -72,7 +111,7 @@ const Products = () => {
                     <p className="text-[9px] font-bold text-orange-600 uppercase tracking-widest mb-1">{product.cat}</p>
                     <h3 className="text-sm font-black uppercase tracking-tight text-slate-900">{product.name}</h3>
                   </div>
-                  <button className="text-[11px] font-bold uppercase border-b border-slate-900 pb-1">Enquire</button>
+                  <button className="text-[11px] font-bold uppercase border-b border-slate-900 pb-1 hover:text-orange-600 transition-colors">Enquire</button>
                 </div>
               </motion.div>
             ))}

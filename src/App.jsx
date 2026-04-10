@@ -12,14 +12,15 @@ import Tender from './pages/Tender';
 import LiveChat from './components/LiveChat';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop'; // Import karo
-import Management from './pages/Management';  
+import Management from './pages/Management';
 import Circular from './pages/Circular';
 import Blogs from './pages/Blogs';
-import Appointment from './pages/Appointment';  
+import Appointment from './pages/Appointment';
 import Equotation from './pages/Equotation';
 import MediaEvents from './pages/MediaEvents';
-import Reviews from './pages/Reviews';  
+import Reviews from './pages/Reviews';
 import TextileAssociates from './pages/TextileAssociates';
+import ProductGallery from './pages/ProductGallery';
 
 // Baki pages bhi aise hi import honge:
 // import Products from './pages/Products';
@@ -35,7 +36,7 @@ function App() {
         <ScrollToTop />
         {/* Navbar hamesha top par rahega */}
         <Navbar />
-        
+
         {/* Main Content Area */}
         <div className="flex-grow">
           <Routes>
@@ -51,10 +52,11 @@ function App() {
             <Route path="/management" element={<Management />} />
             <Route path="/circular" element={<Circular />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/appointment" element={<Appointment />} /> 
+            <Route path="/appointment" element={<Appointment />} />
             <Route path="/equotation" element={<Equotation />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/associates" element={<TextileAssociates />} />
+            <Route path="/product-gallery" element={<ProductGallery />} />
             {/* Jab Product page ban jayega: <Route path="/products" element={<Products />} /> */}
           </Routes>
 

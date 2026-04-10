@@ -20,7 +20,7 @@ const Circular = () => {
                 <div>
                   <h4 className="text-sm font-black uppercase tracking-tight text-slate-900">{n.title}</h4>
                   <div className="flex gap-4 mt-2">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase flex items-center gap-1"><Calendar size={12}/> {n.date}</span>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase flex items-center gap-1"><Calendar size={12} /> {n.date}</span>
                     <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest italic">{n.id}</span>
                   </div>
                 </div>
