@@ -70,10 +70,7 @@ const Auction = () => {
               <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Participation Request <span className="text-orange-600 block text-xs mt-1"></span></h3>
               <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mt-2">Register your interest for upcoming batches.</p>
             </div>
-            <div className="text-right flex items-center gap-3">
-              <Mail size={16} className="text-orange-600" />
-              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest lowercase">services@parekhfabrics.com</p>
-            </div>
+        
           </div>
 
           {isSubmitted ? (

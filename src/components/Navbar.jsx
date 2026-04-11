@@ -28,7 +28,7 @@ const navLinks = [
   { name: 'Contact Us', path: '/contact' },
   { name: 'Products', path: '/products' }, // Cotton & its Products
   { name: 'Product Gallery', path: '/product-gallery' },
-  { name: 'Management', path: '/management' },
+  { name: 'Our Management', path: '/management' },
 
 ];
 
@@ -79,7 +79,7 @@ const navLinks = [
             {/* Location */}
             <p className={`text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.3em] ${scrolled ? 'text-slate-600' : 'text-slate-300'
               }`}>
-              Ahmedabad, India
+              Ahmedabad, GJ, India
             </p>
 
           </div>

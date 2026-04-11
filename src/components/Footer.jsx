@@ -51,25 +51,58 @@ const Footer = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-6">
-            <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">Contact Desk</h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin size={14} className="text-slate-600 mt-1" />
-                <p className="text-[11px] font-bold uppercase tracking-widest leading-loose text-slate-400">
-                  GIDC Vatva, Phase IV, <br /> Ahmedabad, GJ 382445
-                </p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone size={14} className="text-slate-600" />
-                <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">6353778329</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail size={14} className="text-slate-600" />
-                <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">info@parekhfabrics.com</p>
-              </div>
-            </div>
-          </div>
+       <div className="space-y-8">
+  {/* Header */}
+  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-orange-600">
+    Contact Desk
+  </h4>
+
+  <div className="space-y-6">
+    {/* Location */}
+    <div className="flex items-start gap-4">
+      <MapPin size={16} className="text-slate-500 mt-1" />
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-wider text-slate-500 mb-1 opacity-60">Location</p>
+        <p className="text-[11px] font-bold uppercase tracking-widest leading-relaxed text-slate-400">
+          Ahmedabad, GJ, India
+        </p>
+      </div>
+    </div>
+
+    {/* Phone */}
+    <div className="flex items-start gap-4">
+      <Phone size={16} className="text-slate-500 mt-1" />
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-wider text-slate-500 mb-1 opacity-60">Direct Line</p>
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          +91 63537 78329
+        </p>
+      </div>
+    </div>
+
+    {/* Trade Enquiry */}
+    <div className="flex items-start gap-4">
+      <Mail size={16} className="text-slate-500 mt-1" />
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-wider text-slate-500 mb-1 opacity-60">Trade Enquiry</p>
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 break-all">
+          trade-enquiry@parekhfabrics.com
+        </p>
+      </div>
+    </div>
+
+    {/* Customer Care */}
+    <div className="flex items-start gap-4">
+      <Mail size={16} className="text-slate-500 mt-1" />
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-wider text-slate-500 mb-1 opacity-60">Customer Care</p>
+        <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 break-all">
+          customer-care@parekhfabrics.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* SEO / Trust Badge */}
           <div className="space-y-6">

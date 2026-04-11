@@ -15,7 +15,7 @@ const Blogs = () => {
     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
       <div className="max-w-2xl">
         <h2 className="text-4xl font-black uppercase tracking-tighter text-slate-900 leading-none mb-6">
-          Textile <br /><span className="text-slate-400">Insights.</span>
+          Textile <br /><span className="text-slate-400">Articals</span>
         </h2>
         <p className="text-sm md:text-base text-slate-600 font-medium uppercase tracking-wider leading-relaxed border-l-2 border-orange-600 pl-6">
           Join and participate in our nation-wide campaign to digitalize the Textile 
