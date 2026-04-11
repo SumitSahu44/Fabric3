@@ -67,7 +67,7 @@ const Auction = () => {
         <div className="bg-white border border-slate-200 overflow-hidden shadow-sm p-8 md:p-14">
           <div className="flex justify-between items-start mb-10 border-b border-slate-100 pb-6">
             <div>
-              <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Participation Request <span className="text-orange-600 block text-xs mt-1">(e-Form)</span></h3>
+              <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Participation Request <span className="text-orange-600 block text-xs mt-1"></span></h3>
               <p className="text-xs font-medium text-slate-400 uppercase tracking-widest mt-2">Register your interest for upcoming batches.</p>
             </div>
             <div className="text-right flex items-center gap-3">
@@ -150,7 +150,7 @@ const Auction = () => {
                 </button>
                 <div className="mt-8 text-center border-t border-slate-50 pt-8">
                   <a href="mailto:services@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
-                  services@parekhfabrics.com
+                    services@parekhfabrics.com
                   </a>
                 </div>
               </div>

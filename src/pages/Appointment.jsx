@@ -53,7 +53,7 @@ const Appointment = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Corporate Office</span>
-          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">Visit with <span className="text-slate-400">Appointment</span> <span className="text-orange-600 block text-xs mt-2 uppercase">(e-Form)</span></h1>
+          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">Visit with <span className="text-slate-400">Appointment</span> <span className="text-orange-600 block text-xs mt-2 uppercase"></span></h1>
         </div>
 
         <div className="bg-white p-8 md:p-14 shadow-2xl border-t-4 border-orange-600">
@@ -122,7 +122,7 @@ const Appointment = () => {
 
               <div className="grid md:grid-cols-2 gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Option (Roll-down mode) *</label>
+                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Option</label>
                   <select {...register("proofType", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase appearance-none cursor-pointer border-l border-white pl-1">
                     <option value="">Select ID Proof</option>
                     <option value="Aadhaar Card">Aadhaar Card</option>
@@ -153,7 +153,7 @@ const Appointment = () => {
                 </button>
                 <div className="mt-6 text-center">
                   <a href="mailto:appointment@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
-                  appointment@parekhfabrics.com
+                    appointment@parekhfabrics.com
                   </a>
                 </div>
               </div>
