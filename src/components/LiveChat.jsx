@@ -48,7 +48,7 @@ const LiveChat = () => {
             initial={{ opacity: 0, y: 40, scale: 0.9, originY: 1 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.9 }}
-            className="absolute bottom-20 right-0 w-80 md:w-96 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden rounded-sm"
+            className="fixed sm:absolute bottom-24 sm:bottom-20 left-0 right-0 sm:left-auto sm:right-0 mx-auto sm:mx-0 w-[90vw] sm:w-80 md:w-96 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden rounded-sm"
           >
             {/* Header */}
             <div className="bg-slate-900 p-5 flex justify-between items-center">

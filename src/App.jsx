@@ -66,7 +66,7 @@ function App() {
 
         {/* Floating WhatsApp Button */}
         <div className="fixed bottom-6 right-6 z-50">
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+          <a href="https://wa.me/916353778329" target="_blank" rel="noreferrer" className="bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" className="w-8 h-8" alt="WhatsApp" />
           </a>
         </div>

@@ -7,7 +7,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Head Office",
-      detail: "Phase IV, GIDC Vatva, Ahmedabad, Gujarat 382445",
+      detail: "Ahmedabad, GJ, India",
       color: "text-orange-600"
     },
     {
@@ -18,8 +18,14 @@ const Contact = () => {
     },
     {
       icon: Mail,
-      title: "Official Email",
-      detail: "info@parekhfabrics.com",
+      title: "Trade Enquiry",
+      detail: "trade-enquiry@parekhfabrics.com",
+      color: "text-orange-600"
+    },
+    {
+      icon: Mail,
+      title: "Customer Care",
+      detail: "customer-care@parekhfabrics.com",
       color: "text-orange-600"
     },
     {

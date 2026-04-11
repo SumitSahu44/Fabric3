@@ -69,37 +69,7 @@ quality, with Quality Assurance and a Quality Seal.
         </div>
       </section>
 
-      {/* Management - Clean Cards */}
-      <section className="py-20 bg-slate-50 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange-600 mb-2">Leadership</h2>
-            <h3 className="text-2xl font-black uppercase tracking-tighter text-slate-900">Our Management</h3>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 flex items-center gap-6 shadow-sm border border-slate-100">
-              <div className="w-16 h-16 rounded-full bg-slate-200 flex-shrink-0 overflow-hidden grayscale">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" alt="MD" />
-              </div>
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-tight">Rajesh Parekh</h4>
-                <p className="text-[9px] font-bold text-orange-600 uppercase tracking-widest">Managing Director</p>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 flex items-center gap-6 shadow-sm border border-slate-100">
-              <div className="w-16 h-16 rounded-full bg-slate-200 flex-shrink-0 overflow-hidden grayscale">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" alt="Head" />
-              </div>
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-tight">Anil Parekh</h4>
-                <p className="text-[9px] font-bold text-blue-900 uppercase tracking-widest">Head of Operations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
     </div>
   );
 };

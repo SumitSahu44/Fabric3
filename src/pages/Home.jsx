@@ -45,12 +45,7 @@ quality, with Quality Assurance and a Quality Seal.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 lg:justify-start">
-             <div className="px-4 py-2 border border-slate-200 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-500">
-               Direct Factory Rates
-             </div>
-             <div className="px-4 py-2 border border-slate-200 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-500">
-               Quality Certified
-             </div>
+        
           </div>
         </div>
       </div>
