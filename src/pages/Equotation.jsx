@@ -56,6 +56,7 @@ const Equotation = () => {
           </h1>
           <p className="mt-6 text-xs text-slate-600 uppercase tracking-widest font-bold max-w-xl leading-relaxed">
             Generate formal industrial quotations for Parekh Fabrics products. Our system will calculate rates based on current market standards and GST compliance.
+            Generate formal industrial quotations for Parekh Fabrics products. Our system will calculate rates based on current market standards and GST compliance.
           </p>
         </div>
 
