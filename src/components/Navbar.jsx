@@ -22,33 +22,33 @@ const Navbar = () => {
     setIsDropdownOpen(false);
   }, [location]);
 
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Contact Us', path: '/contact' },
-  { name: 'Products', path: '/products' }, // Cotton & its Products
-  { name: 'Product Gallery', path: '/product-gallery' },
-  { name: 'Our Management', path: '/management' },
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'Products', path: '/products' }, // Cotton & its Products
+    { name: 'Product Gallery', path: '/product-gallery' },
+    { name: 'Our Management', path: '/management' },
 
-];
+  ];
 
- const resourceLinks = [
-  { name: 'E-Quotation', path: '/equotation' },
-  { name: 'E-Auction', path: '/auction' },
-  { name: 'Tender & Contract', path: '/tender-contracts' },
-  { name: 'Career', path: '/career' },
-  { name: 'Circular', path: '/circular' },
-  { name: 'Blog', path: '/blogs' },
-  { name: 'Customer Review', path: '/reviews' },
-  { name: 'Visit Appointment', path: '/appointment' }, // e-Form
-  { name: 'Media Gallery', path: '/media-events' },
-  { name: 'Textile Associates', path: '/associates' },
-];
+  const resourceLinks = [
+    { name: 'E-Quotation', path: '/equotation' },
+    { name: 'E-Auction', path: '/auction' },
+    { name: 'Tender & Contract', path: '/tender-contracts' },
+    { name: 'Career', path: '/career' },
+    { name: 'Circular', path: '/circular' },
+    { name: 'Blog', path: '/blogs' },
+    { name: 'Customer Review', path: '/reviews' },
+    { name: 'Visit Appointment', path: '/appointment' }, // e-Form
+    { name: 'Media Gallery', path: '/media-events' },
+    { name: 'Textile Associates', path: '/associates' },
+  ];
 
   return (
     <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled
-        ? 'bg-white shadow-md py-3'
-        : 'bg-slate-900/40 backdrop-blur-md border-b border-white/10 py-5'
+      ? 'bg-white shadow-md py-3'
+      : 'bg-slate-900/40 backdrop-blur-md border-b border-white/10 py-5'
       }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
@@ -61,8 +61,12 @@ const navLinks = [
         >
 
           {/* Logo Icon */}
-          <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl bg-orange-600 text-white font-bold text-xl shadow-md">
-            P
+          <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl overflow-hidden">
+            <img
+              src="/8.png"
+              alt="Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Text Content */}
@@ -130,8 +134,8 @@ const navLinks = [
 
           {/* CTA Button */}
           <Link to="/enquiry" className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all flex items-center gap-2 ${scrolled
-              ? 'bg-blue-900 text-white hover:bg-orange-600 shadow-lg'
-              : 'bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white hover:text-slate-900'
+            ? 'bg-blue-900 text-white hover:bg-orange-600 shadow-lg'
+            : 'bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white hover:text-slate-900'
             }`}>
             <MessageSquare size={14} />
             Enquiry
