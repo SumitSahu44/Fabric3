@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Hammer, CheckCircle, Mail } from 'lucide-react';
 import { useForm } from 'react-hook-form';
+import { API_BASE_URL } from '../utils/api';
 
 const Auction = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -27,7 +28,7 @@ const Auction = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auction", {
+      const response = await fetch(`${API_BASE_URL}/auction`, {
         method: "POST",
         body: formData,
       });

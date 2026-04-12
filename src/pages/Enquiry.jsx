@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
+import { API_BASE_URL } from '../utils/api';
 
 const Enquiry = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -28,7 +29,7 @@ const Enquiry = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/trade-enquiry", {
+      const response = await fetch(`${API_BASE_URL}/trade-enquiry`, {
         method: "POST",
         body: formData,
       });
@@ -173,20 +174,15 @@ const Enquiry = () => {
                     <input type="file" {...register("gstCertificate")} className="w-full text-[10px] font-bold text-slate-500 file:mr-4 file:py-1 file:px-3 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-100 file:text-slate-900 hover:file:bg-orange-600 hover:file:text-white cursor-pointer transition-all" />
                   </div>
                 </div>
-                <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Email Id</label>
-                  <input type="email" className="w-full bg-transparent border-none outline-none py-2 text-xs font-bold uppercase tracking-widest" placeholder="business@email.com" />
-
-                  <div className="pt-4">
-                    <button type="submit" disabled={loading} className="flex items-center justify-center gap-3 w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all shadow-xl disabled:opacity-70">
-                      {loading ? "Submitting..." : "Submit"}
-                      {!loading && <Send size={14} />}
-                    </button>
-                    <div className="mt-6 text-center">
-                      <a href="mailto:trade-enquiry@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
-                        trade-enquiry@parekhfabrics.com
-                      </a>
-                    </div>
+                <div className="pt-4">
+                  <button type="submit" disabled={loading} className="flex items-center justify-center gap-3 w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all shadow-xl disabled:opacity-70">
+                    {loading ? "Submitting..." : "Submit"}
+                    {!loading && <Send size={14} />}
+                  </button>
+                  <div className="mt-6 text-center">
+                    <a href="mailto:trade-enquiry@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
+                      trade-enquiry@parekhfabrics.com
+                    </a>
                   </div>
                 </div>
               </form>

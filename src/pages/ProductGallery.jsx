@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { productApi } from '../utils/api';
+import { productApi, IMAGE_BASE_URL } from '../utils/api';
 import { Loader2 } from 'lucide-react';
 
 const staticGalleryData = [
@@ -25,7 +25,7 @@ const ProductGallery = () => {
             id: p._id,
             name: p.title,
             cat: p.category,
-            img: `http://localhost:5000/${p.image}`
+            img: `${IMAGE_BASE_URL}/${p.image}`
           }));
           setItems(dynamicItems);
           const uniqueCats = ['All', ...new Set(dynamicItems.map(i => i.cat))];
