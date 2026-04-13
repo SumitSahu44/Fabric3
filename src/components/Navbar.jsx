@@ -34,7 +34,7 @@ const Navbar = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Contact Us', path: '/contact' },
     { name: 'Products', path: '/products' },
-    { name: 'Product Gallery', path: '/product-gallery' },
+    { name: 'Media Gallery', path: '/media-events' },
     { name: 'Our Management', path: '/management' },
   ];
 
@@ -47,7 +47,7 @@ const Navbar = () => {
     { name: 'Blog', path: '/blogs' },
     { name: 'Customer Review', path: '/reviews' },
     { name: 'Visit Appointment', path: '/appointment' },
-    { name: 'Media Gallery', path: '/media-events' },
+
     { name: 'Textile Associates', path: '/associates' },
   ];
 
