@@ -16,7 +16,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menus on route change
+  // Mobile menu khulne par background scroll band karne ke liye
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     setIsOpen(false);
     setIsDropdownOpen(false);
@@ -26,10 +34,9 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Contact Us', path: '/contact' },
-    { name: 'Products', path: '/products' }, // Cotton & its Products
+    { name: 'Products', path: '/products' },
     { name: 'Product Gallery', path: '/product-gallery' },
     { name: 'Our Management', path: '/management' },
-
   ];
 
   const resourceLinks = [
@@ -40,159 +47,109 @@ const Navbar = () => {
     { name: 'Circular', path: '/circular' },
     { name: 'Blog', path: '/blogs' },
     { name: 'Customer Review', path: '/reviews' },
-    { name: 'Visit Appointment', path: '/appointment' }, // e-Form
+    { name: 'Visit Appointment', path: '/appointment' },
     { name: 'Media Gallery', path: '/media-events' },
     { name: 'Textile Associates', path: '/associates' },
   ];
 
   return (
-    <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled
-      ? 'bg-white shadow-md py-3'
-      : 'bg-slate-900/40 backdrop-blur-md border-b border-white/10 py-5'
-      }`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-
-        {/* Logo */}
-        {/* LOGO */}
-        <Link
-          to="/"
-          className={`group flex items-center gap-3 transition-colors ${scrolled ? 'text-blue-900' : 'text-white'
-            }`}
-        >
-
-          {/* Logo Icon */}
-          <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl overflow-hidden">
-            <img
-              src="/8.png"
-              alt="Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="flex flex-col leading-tight">
-
-            {/* Brand Name */}
-            <div className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
-              Parekh{" "}
-              <span className="text-orange-600 group-hover:text-orange-500">
-                Fabrics
-              </span>
-            </div>
-
-            {/* Location */}
-            <p className={`text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.3em] ${scrolled ? 'text-slate-600' : 'text-slate-300'
-              }`}>
-              Ahmedabad, GJ, India
-            </p>
-
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-7">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) => `
-                text-[11px] font-black uppercase tracking-[0.15em] transition-all hover:text-orange-600
-                ${isActive ? 'text-orange-600' : scrolled ? 'text-slate-700' : 'text-white/90 hover:text-white'}
-              `}
-            >
-              {link.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{link.name.slice(2)}</> : link.name}
-            </NavLink>
-          ))}
-
-          {/* Resources Dropdown */}
-          <div
-            className="relative group h-full py-2"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <button className={`flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.15em] transition-all ${scrolled ? 'text-slate-700' : 'text-white/90'
-              } group-hover:text-orange-600`}>
-              Resources <ChevronDown size={12} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {/* Dropdown Menu */}
-            <div className={`absolute top-full right-0 w-48 bg-white shadow-2xl border-t-2 border-orange-600 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'
-              }`}>
-              <div className="py-2">
-                {resourceLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.path}
-                    className="block px-6 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-slate-50 hover:text-orange-600 transition-all"
-                  >
-                    {link.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{link.name.slice(2)}</> : link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <Link to="/enquiry" className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all flex items-center gap-2 ${scrolled
-            ? 'bg-blue-900 text-white hover:bg-orange-600 shadow-lg'
-            : 'bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white hover:text-slate-900'
-            }`}>
-            <MessageSquare size={14} />
-            Enquiry
-          </Link>
-        </div>
-
-        {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`${scrolled ? 'text-blue-900' : 'text-white'} transition-colors`}
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-slate-950 z-[-1] lg:hidden transition-all duration-500 overflow-y-auto ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+    <>
+      {/* NAVBAR MAIN CONTAINER */}
+      <nav className={`fixed w-full transition-all duration-500 z-[1001] ${scrolled || isOpen ? 'bg-white shadow-md py-3' : 'bg-slate-900/40 backdrop-blur-md border-b border-white/10 py-5'
         }`}>
-        <div className="flex flex-col items-center pt-32 pb-12 space-y-6 px-6">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              className="text-white text-xl font-black uppercase tracking-tighter hover:text-orange-500 transition-colors"
-            >
-              {link.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{link.name.slice(2)}</> : link.name}
-            </NavLink>
-          ))}
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
-          {/* Mobile Resource Section */}
-          <div className="w-full border-t border-white/10 pt-6 flex flex-col items-center space-y-4">
-            <p className="text-orange-600 text-[11px] font-black uppercase tracking-[0.3em]">Quick Resources</p>
-            {resourceLinks.map((link) => (
-              <Link
+          {/* Logo - Text aur Colors wahi hain */}
+          <Link to="/" className={`group flex items-center gap-3 transition-colors ${scrolled || isOpen ? 'text-blue-900' : 'text-white'}`}>
+            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl overflow-hidden">
+              <img src="/8.png" alt="Logo" className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col leading-tight">
+              <div className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
+                Parekh <span className="text-orange-600">Fabrics</span>
+              </div>
+              <p className={`text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.3em] ${scrolled || isOpen ? 'text-slate-600' : 'text-slate-300'}`}>
+                Ahmedabad, GJ, India
+              </p>
+            </div>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-7">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) => `text-[11px] font-black uppercase tracking-[0.15em] transition-all hover:text-orange-600 ${isActive ? 'text-orange-600' : scrolled ? 'text-slate-700' : 'text-white/90'
+                  }`}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+
+            <Link to="/enquiry" className={`px-6 py-2.5 text-[11px] font-black uppercase tracking-widest transition-all flex items-center gap-2 ${scrolled ? 'bg-blue-900 text-white shadow-lg' : 'bg-white/10 text-white border border-white/20'
+              }`}>
+              <MessageSquare size={14} /> Enquiry
+            </Link>
+          </div>
+
+          {/* Mobile Toggle Button - Always on Top */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`relative z-[1002] p-2 ${scrolled || isOpen ? 'text-blue-900' : 'text-white'}`}
+            >
+              {isOpen ? <X size={30} /> : <Menu size={30} />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* MOBILE MENU OVERLAY - Screen ke top pe fix hai ab */}
+      <div className={`fixed inset-0 w-full h-screen bg-white z-[1000] lg:hidden transition-transform duration-500 ease-in-out ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        }`}>
+        <div className="flex flex-col h-full pt-32 pb-10 px-8 overflow-y-auto">
+          {/* Menu Links - Same Sequence */}
+          <div className="flex flex-col space-y-6">
+            {navLinks.map((link) => (
+              <NavLink
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="text-slate-400 text-sm font-bold uppercase tracking-widest hover:text-white"
+                className="text-2xl font-black text-slate-900 uppercase tracking-tighter"
               >
-                {link.name.toLowerCase().startsWith('e-') ? <><span className="lowercase">e-</span>{link.name.slice(2)}</> : link.name}
-              </Link>
+                {link.name}
+              </NavLink>
             ))}
+          </div>
+
+          {/* Resource Links - Same Sequence */}
+          <div className="mt-10 pt-8 border-t border-slate-100">
+            <p className="text-orange-600 text-[10px] font-black uppercase tracking-[0.3em] mb-6">Quick Resources</p>
+            <div className="grid grid-cols-1 gap-4">
+              {resourceLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="text-slate-500 text-sm font-bold uppercase tracking-widest"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           <Link
             to="/enquiry"
             onClick={() => setIsOpen(false)}
-            className="w-full max-w-xs bg-orange-600 text-white py-4 font-black uppercase tracking-widest mt-6 text-center shadow-2xl"
+            className="mt-10 w-full bg-blue-900 text-white py-5 font-black uppercase tracking-widest text-center shadow-xl"
           >
-            Trade Enquiry
+            Send Trade Enquiry
           </Link>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

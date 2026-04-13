@@ -16,9 +16,9 @@ const About = () => {
       {/* Small Header Section */}
       <section className="pt-32 pb-16 px-6 border-b border-slate-100">
         <div className="max-w-5xl mx-auto">
-        
+
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-tight">
-            Our Legacy in <br /> 
+            Our Legacy in <br />
             <span className="text-slate-400">Cotton Manufacturing.</span>
           </h1>
         </div>
@@ -28,7 +28,7 @@ const About = () => {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Image Section - Balanced Size */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -36,9 +36,9 @@ const About = () => {
           >
             <div className="aspect-[4/5] overflow-hidden bg-slate-100 transition-all duration-1000">
               {/* Image usage as requested */}
-              <img 
-                src="/fabric.avif" 
-                alt="Premium Fabric Texture" 
+              <img
+                src="/fabric.avif"
+                alt="Premium Fabric Texture"
                 className="w-full h-full object-cover"
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1584184924103-e310d9dc85fc?auto=format&fit=crop&q=80&w=800' }}
               />
@@ -56,20 +56,20 @@ const About = () => {
               Manufacturing Excellence
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-             Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
-quality of the Cotton Fabrics and its Products, from lower range to higher range
-with different TC at reasonable and low price range with best and premium
-quality, with Quality Assurance and a Quality Seal.
+              Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
+              quality of the Cotton Fabrics and its Products, from lower range to higher range
+              with different TC at reasonable and low price range with best and premium
+              quality, with Quality Assurance and a Quality Seal.
 
             </p>
-          
-            
-         
+
+
+
           </div>
         </div>
       </section>
 
-   
+
     </div>
   );
 };

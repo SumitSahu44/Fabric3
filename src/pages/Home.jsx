@@ -12,47 +12,47 @@ const Home = () => {
       {/* 1. Hero Section */}
       <Hero />
 
-   {/* 2. Industrial Expertise (Why Choose Us) */}
-<section className="py-24 bg-white px-6">
-  <div className="max-w-6xl mx-auto">
-    {/* flex-row-reverse ensures Heading is on the Right and Para is on the Left on Large Screens */}
-    <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
-      
-      {/* RIGHT SIDE: Heading Section */}
-      <div className="lg:w-1/2 text-left lg:text-right">
-        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">
-          Manufacturing Edge
-        </span>
-        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9] mb-6">
-          Why B2B Leaders <br /> 
-          <span className="text-slate-400">Trust Us.</span>
-        </h2>
-        <div className="h-1 w-20 bg-orange-600 ml-0 lg:ml-auto mb-6"></div> {/* Decorative line */}
-      </div>
+      {/* 2. Industrial Expertise (Why Choose Us) */}
+      <section className="py-24 bg-white px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* flex-row-reverse ensures Heading is on the Right and Para is on the Left on Large Screens */}
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
 
-      {/* LEFT SIDE: Paragraph Section */}
-      <div className="lg:w-1/2">
-        <div className="relative">
-          {/* Subtle Quote Icon or Design Element */}
-          <span className="absolute -top-6 -left-4 text-6xl text-slate-100 font-serif">“</span>
-          
-          <p className="text-[15px] md:text-[17px] text-slate-600 leading-relaxed font-medium text-justify relative z-10">
-            <strong className="text-slate-900">Parekh Fabrics</strong> Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
-quality of the Cotton Fabrics and its Products, from lower range to higher range
-with different TC at reasonable and low price range with best and premium
-quality, with Quality Assurance and a Quality Seal.
-          
-          </p>
+            {/* RIGHT SIDE: Heading Section */}
+            <div className="lg:w-1/2 text-left lg:text-right">
+              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">
+                Manufacturing Edge
+              </span>
+              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9] mb-6">
+                Why B2B Leaders <br />
+                <span className="text-slate-400">Trust Us.</span>
+              </h2>
+              <div className="h-1 w-20 bg-orange-600 ml-0 lg:ml-auto mb-6"></div> {/* Decorative line */}
+            </div>
 
-          <div className="mt-8 flex flex-wrap gap-4 lg:justify-start">
-        
+            {/* LEFT SIDE: Paragraph Section */}
+            <div className="lg:w-1/2">
+              <div className="relative">
+                {/* Subtle Quote Icon or Design Element */}
+                <span className="absolute -top-6 -left-4 text-6xl text-slate-100 font-serif">“</span>
+
+                <p className="text-[15px] md:text-[17px] text-slate-600 leading-relaxed font-medium text-justify relative z-10">
+                  <strong className="text-slate-900">Parekh Fabrics</strong> is the trusted Manufacturers & Supplier of the high standard
+                  quality of the Cotton Fabrics and its Products, from lower range to higher range
+                  with different TC at reasonable and low price range with best and premium
+                  quality, with Quality Assurance and a Quality Seal.
+
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-4 lg:justify-start">
+
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* 3. Featured Categories (Visual Preview) */}
       <section className="py-24 bg-slate-900 text-white px-6 overflow-hidden">
@@ -70,8 +70,8 @@ quality, with Quality Assurance and a Quality Seal.
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
             {/* Category 1 */}
             <div className="relative group h-[400px] overflow-hidden">
-              <img src="/fabric.avif" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" 
-              onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600'} />
+              <img src="/fabric.avif" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100"
+                onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600'} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-xl font-black uppercase tracking-tighter">Pure Organic Cotton</h3>
                 <p className="text-[9px] uppercase tracking-widest text-orange-500 mt-2">Export Quality • GOTS Certified</p>
@@ -102,7 +102,7 @@ quality, with Quality Assurance and a Quality Seal.
         <div className="max-w-6xl mx-auto text-center">
           <span className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block"><span className="lowercase">e-</span>Service Hub</span>
           <h2 className="text-3xl font-black uppercase tracking-tighter text-blue-900 mb-16">Digital Procurement.</h2>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'e-Quotation', path: '/enquiry' },
@@ -110,8 +110,8 @@ quality, with Quality Assurance and a Quality Seal.
               { name: 'Tender & Contract', path: '/enquiry' },
               { name: 'Career Portal', path: '/career' }
             ].map((item) => (
-              <Link 
-                key={item.name} 
+              <Link
+                key={item.name}
                 to={item.path}
                 className="group p-10 bg-white border border-slate-100 hover:border-orange-500 transition-all shadow-sm hover:shadow-xl"
               >
