@@ -156,7 +156,7 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="text-slate-500 text-sm font-bold uppercase tracking-widest"
+                  className="text-slate-500 text-sm font-bold  tracking-widest"
                 >
                   {link.name}
                 </Link>
