@@ -67,7 +67,7 @@ const MediaEvents = () => {
           <div className="max-w-2xl">
             <span className="text-[11px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-4 italic">Corporate Newsroom</span>
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9]">
-              Media & <br /> <span className="text-slate-300 italic" style={{ WebkitTextStroke: '1px #cbd5e1', color: 'transparent' }}>Live Events.</span>
+              Media & <br /> <span className="text-slate-300 italic" style={{ color: '#f54a00' }}>Live Events.</span>
             </h1>
           </div>
           
@@ -158,4 +158,4 @@ const MediaEvents = () => {
   );
 };
 
-export default MediaEvents;
+export default MediaEvents;

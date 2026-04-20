@@ -59,7 +59,7 @@ const Products = () => {
           <div className="max-w-2xl">
             <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">Textile Marketplace</span>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
-              Cotton & <span className="text-slate-200">Products.</span>
+              Cotton & <span className="text-orange-600">Products.</span>
             </h1>
           </div>
           {!loading && products.length > 0 && (

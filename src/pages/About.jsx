@@ -19,7 +19,7 @@ const About = () => {
 
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-tight">
             Our Legacy in <br />
-            <span className="text-slate-400">Cotton Manufacturing.</span>
+            <span className="text-orange-600">Cotton Manufacturing.</span>
           </h1>
         </div>
       </section>

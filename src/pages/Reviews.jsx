@@ -44,7 +44,7 @@ const Reviews = () => {
         <div className="text-center mb-20">
           <span className="text-[11px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-4 italic">Global Trust</span>
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
-            Client <span className="text-slate-300italic" style={{ WebkitTextStroke: '1px #cbd5e1', color: 'transparent' }}>Testimonials.</span>
+            Client <span className="text-slate-300 " style={{  color: '#f54a00' }}>Testimonials.</span>
           </h1>
           <p className="mt-6 text-xs text-slate-600 uppercase tracking-widest font-bold max-w-lg mx-auto leading-relaxed">
             Reliability and quality standards that empower global textile supply chains.

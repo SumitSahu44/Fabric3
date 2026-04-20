@@ -36,7 +36,7 @@ const Hero = () => {
             Parekh <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Fabrics</span>
           </h1>
           <p className="text-gray-300 text-base md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed italic">
-            "Manufacturers & Supplier of Cotton Fabrics & its Products"
+            "Manufacturer & Supplier of Cotton Fabrics & its Products"
           </p>
           
           <div className="flex flex-wrap justify-center gap-6">

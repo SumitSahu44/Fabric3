@@ -47,7 +47,7 @@ const Career = () => {
         </span>
         <h1 className="text-3xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-tight">
           Careers at <br /> 
-          <span className="text-transparent" style={{ WebkitTextStroke: '1px #94a3b8' }}>Parekh Fabrics<span className="text-slate-400">.</span></span>
+          <span className="text-transparent" style={{ color: '#f54a00' }}>Parekh Fabrics<span className="text-orange-600">.</span></span>
         </h1>
       </motion.div>
       <div className="md:col-span-1 text-right">
@@ -120,4 +120,4 @@ const Career = () => {
   );
 };
 
-export default Career;
+export default Career;

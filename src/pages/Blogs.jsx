@@ -46,15 +46,40 @@ const Blogs = () => {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl">
-            <h2 className="text-5xl font-black uppercase tracking-tighter text-slate-900 leading-[0.85] mb-6">
-              Textile <br /><span className="text-slate-200">Articles</span>
-            </h2>
-            <p className="text-xs md:text-sm text-slate-500 font-bold uppercase tracking-[0.2em] leading-relaxed border-l-4 border-orange-600 pl-8">
-              Join and participate in our nation-wide campaign to digitalize the Textile 
-              Sector, one of the largest sectors of India.
-            </p>
-          </div>
+        <div className="max-w-2xl">
+  <h2 className="text-5xl font-black uppercase tracking-tighter text-slate-900 leading-[0.85] mb-8">
+    Textile <br />
+    <span className="text-orange-600">Articles</span>
+  </h2>
+
+  <div className="relative bg-white/60 backdrop-blur-md border border-slate-200 rounded-3xl p-8 shadow-xl">
+    
+    {/* Quote Icon */}
+    <div className="absolute -top-5 -left-4 text-6xl text-orange-4  00 font-serif">
+      “
+    </div>
+
+    {/* Quote Text */}
+    <p className="text-sm md:text-base text-slate-600 font-medium leading-relaxed mb-6">
+      Join and participate in our nation-wide campaign to digitalize the Textile 
+      Sector, one of the largest sectors of India.
+    </p>
+
+    {/* Author */}
+    <div className="border-t border-slate-200 pt-4">
+      <p className="text-sm font-semibold text-slate-800">
+        HC Parekh
+      </p>
+      <p className="text-sm text-slate-500">
+        Textile Manufacturer & Entrepreneur
+      </p>
+      <p className="text-[10px] uppercase tracking-widest text-orange-600 font-bold mt-1">
+        India
+      </p>
+    </div>
+
+  </div>
+</div>
           {!loading && blogs.length > 0 && (
             <div className="bg-slate-900 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
               Live Feed: {blogs.length} Articles
@@ -107,4 +132,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blogs;

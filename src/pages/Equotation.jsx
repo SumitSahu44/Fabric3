@@ -53,12 +53,11 @@ const Equotation = () => {
         <div className="mb-20 text-center md:text-left">
           <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Smart Pricing Portal</span>
           <h1 className="text-4xl md:text-6xl font-black  tracking-tighter text-slate-900 leading-none">
-            Digital <br /> <span className="text-slate-400 italic" style={{ WebkitTextStroke: '1px #94a3b8', color: 'transparent' }}>e-Quotation.</span>
+            Digital <br /> <span className="text-slate-400 italic" style={{ color: '#f54a00' }}>e-Quotation.</span>
           </h1>
           <p className="mt-6 text-xs text-slate-600 uppercase tracking-widest font-bold max-w-xl leading-relaxed">
             Generate formal industrial quotations for Parekh Fabrics products. Our system will calculate rates based on current market standards and GST compliance.
-            Generate formal industrial quotations for Parekh Fabrics products. Our system will calculate rates based on current market standards and GST compliance.
-          </p>
+            </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">

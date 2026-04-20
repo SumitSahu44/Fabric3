@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
 
             <p className="text-[11px] leading-relaxed font-bold uppercase tracking-[0.2em] text-slate-600 max-w-xs">
-              Manufacturers & Global Suppliers of Premium Cotton & Industrial Fabrics based in Ahmedabad, Gujarat.
+              Manufacturer & Global Supplier of Premium Cotton & Industrial Fabrics based in Ahmedabad, Gujarat.
             </p>
 
             <div className="flex gap-4 pt-4">

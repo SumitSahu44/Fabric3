@@ -48,7 +48,7 @@ const Contact = () => {
           >
             <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-4">Global Connect</span>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
-              Get in <br /> <span className="text-slate-400 italic" style={{ WebkitTextStroke: '1px #94a3b8', color: 'transparent' }}>Touch.</span>
+              Get in <br /> <span className="text-slate-400 italic" style={{  color: '#f54a00' }}>Touch.</span>
             </h1>
           </motion.div>
           <div>
