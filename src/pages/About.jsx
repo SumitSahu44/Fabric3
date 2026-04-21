@@ -56,7 +56,7 @@ const About = () => {
               Manufacturing Excellence
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed font-medium">
-              Parekh Fabrics is the trusted Manufacturers & Supplier of the high standard
+              Parekh Fabrics is the trusted Manufacturer & Supplier of the high standard
               quality of the Cotton Fabrics and its Products, from lower range to higher range
               with different TC at reasonable and low price range with best and premium
               quality, with Quality Assurance and a Quality Seal.

@@ -73,7 +73,7 @@ const Equotation = () => {
                     <Mail size={16} />
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Email inquiries directly</p>
+                    <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Email enquiries directly</p>
                     <p className="text-xs font-black lowercase">trade-enquiry@parekhfabrics.com</p>
                   </div>
                 </div>

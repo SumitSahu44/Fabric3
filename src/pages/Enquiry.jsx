@@ -110,7 +110,7 @@ const Enquiry = () => {
                 </div>
                 <h3 className="text-3xl font-black uppercase tracking-tighter text-slate-900 mb-4">Request Received</h3>
                 <p className="text-slate-500 max-w-md mx-auto text-sm leading-relaxed font-medium">
-                  Thank you! Your trade inquiry has been submitted successfully. Our commercial team will contact you shortly.
+                  Thank you! Your trade enquiry has been submitted successfully. Our commercial team will contact you shortly.
                 </p>
               </motion.div>
             ) : (

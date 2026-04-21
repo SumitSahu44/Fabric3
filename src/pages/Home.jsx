@@ -37,7 +37,7 @@ const Home = () => {
                 <span className="absolute -top-6 -left-4 text-6xl text-slate-100 font-serif">“</span>
 
                 <p className="text-[15px] md:text-[17px] text-slate-600 leading-relaxed font-medium text-justify relative z-10">
-                  <strong className="text-slate-900">Parekh Fabrics</strong> is the trusted Manufacturers & Supplier of the high standard
+                  <strong className="text-slate-900">Parekh Fabrics</strong> is the trusted Manufacturer & Supplier of the high standard
                   quality of the Cotton Fabrics and its Products, from lower range to higher range
                   with different TC at reasonable and low price range with best and premium
                   quality, with Quality Assurance and a Quality Seal.
