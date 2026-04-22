@@ -59,7 +59,7 @@ const Enquiry = () => {
             <div>
               <h2 className="text-2xl font-black uppercase tracking-tighter text-slate-900 mb-6">Trade Enquiry <span className="text-orange-600 block text-sm mt-2"></span></h2>
               <p className="text-xs text-slate-600 leading-relaxed font-medium tracking-tight">
-                For bulk orders, business tie-ups, and job work contracts. Fill the trade e-form and our compliance team will review your details.
+                For bulk orders, business tie-ups, and job work contracts. Fill the trade form and our compliance team will review your details.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ const Enquiry = () => {
             </div>
           </div>
 
-          {/* Right Side: Professional e-Form */}
+          {/* Right Side: Professional Form */}
           <div className="lg:col-span-2 bg-white p-8 md:p-12 shadow-2xl border border-slate-100">
             {isSubmitted ? (
               <motion.div

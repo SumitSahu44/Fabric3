@@ -25,7 +25,7 @@ const ProductGallery = () => {
             id: p._id,
             name: p.title,
             cat: p.category,
-            img: `${IMAGE_BASE_URL}/${p.image}`
+            img: p.image?.startsWith("http") ? p.image : `${IMAGE_BASE_URL}/${p.image}`
           }));
           setItems(dynamicItems);
           const uniqueCats = ['All', ...new Set(dynamicItems.map(i => i.cat))];

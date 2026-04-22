@@ -113,7 +113,7 @@ const MediaEvents = () => {
                 >
                   <div className="overflow-hidden bg-slate-100 aspect-video mb-8 relative rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-700">
                     <img 
-                      src={item.imageUrl || (item.image ? `${IMAGE_BASE_URL}/${item.image}` : staticEvents[0].image)} 
+                      src={item.imageUrl || (item.image ? (item.image.startsWith("http") ? item.image : `${IMAGE_BASE_URL}/${item.image}`) : staticEvents[0].image)} 
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-110 grayscale group-hover:grayscale-0 transition-all duration-700"
                       onError={(e) => { e.target.src = staticEvents[0].image }}

@@ -26,7 +26,7 @@ const Products = () => {
             id: p._id,
             name: p.title || p.name,
             cat: p.category || "General",
-            img: p.imageUrl || (p.image ? `${IMAGE_BASE_URL}/${p.image}` : staticProductData[0].img)
+            img: p.imageUrl || (p.image ? (p.image.startsWith("http") ? p.image : `${IMAGE_BASE_URL}/${p.image}`) : staticProductData[0].img)
           }));
           setProducts(dynamicProducts);
           const uniqueCats = ['All', ...new Set(dynamicProducts.map(i => i.cat))];

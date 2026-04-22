@@ -105,9 +105,9 @@ const Home = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'e-Quotation', path: '/enquiry' },
+              { name: 'e-Quotation', path: '/equotation' },
               { name: 'e-Auction', path: '/auction' },
-              { name: 'Tender & Contract', path: '/enquiry' },
+              { name: 'Tender & Contract', path: '/tender-contracts' },
               { name: 'Career Portal', path: '/career' }
             ].map((item) => (
               <Link

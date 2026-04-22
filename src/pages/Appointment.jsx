@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, MapPin, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Mail } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { API_BASE_URL } from '../utils/api';
 
@@ -50,19 +50,34 @@ const Appointment = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-32 pb-20 px-6">
+    <div className="bg-slate-50 min-h-screen pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 block mb-2">Corporate Office</span>
-          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900">Visit with <span className="text-slate-400">Appointment</span> <span className="text-orange-600 block text-xs mt-2 uppercase"></span></h1>
+
+        {/* Heading */}
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-orange-600 block mb-2">
+            Corporate Office
+          </span>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 leading-tight">
+            Visit with <span className="text-slate-600">Appointment</span>
+            <span className="text-orange-600 block text-[10px] sm:text-xs mt-2 uppercase"></span>
+          </h1>
         </div>
 
-        <div className="bg-white p-8 md:p-14 shadow-2xl border-t-4 border-orange-600">
-          <div className="flex justify-between items-center mb-10 border-b border-slate-100 pb-6">
-            <h2 className="text-xl font-black uppercase tracking-tighter text-slate-900 leading-none">Book Appointment</h2>
-            <div className="text-right flex items-center gap-2">
+        {/* Card */}
+        <div className="bg-white p-5 sm:p-8 md:p-14 shadow-2xl border-t-4 border-orange-600">
+
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8 sm:mb-10 border-b border-slate-100 pb-4 sm:pb-6">
+            <h2 className="text-lg sm:text-xl font-black uppercase tracking-tighter text-slate-900 leading-none">
+              Book Appointment
+            </h2>
+
+            <div className="text-left sm:text-right flex items-center gap-2">
               <Mail size={14} className="text-orange-600" />
-              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest lowercase">appointment@parekhfabrics.com</span>
+              <span className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest lowercase break-all">
+                appointment@parekhfabrics.com
+              </span>
             </div>
           </div>
 
@@ -71,60 +86,83 @@ const Appointment = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
-              className="flex flex-col items-center justify-center text-center py-12"
+              className="flex flex-col items-center justify-center text-center py-10 sm:py-12"
             >
-              <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-6">
-                <CheckCircle size={40} className="text-orange-600" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-orange-50 rounded-full flex items-center justify-center mb-5 sm:mb-6">
+                <CheckCircle size={32} className="sm:w-10 sm:h-10 text-orange-600" />
               </div>
-              <h3 className="text-3xl font-black uppercase tracking-tighter text-slate-900 mb-4">Request Sent</h3>
-              <p className="text-slate-500 max-w-sm mx-auto text-sm leading-relaxed font-medium">
+
+              <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-slate-900 mb-3 sm:mb-4">
+                Request Sent
+              </h3>
+
+              <p className="text-slate-500 max-w-sm mx-auto text-xs sm:text-sm leading-relaxed font-medium">
                 Thank you! Your appointment request has been submitted. Our team will review the details and confirm your visit shortly.
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" encType="multipart/form-data">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8" encType="multipart/form-data">
+
               {errorMsg && (
-                <div className="p-4 bg-red-50 text-red-600 text-xs font-bold uppercase tracking-widest border-l-4 border-red-500">
+                <div className="p-3 sm:p-4 bg-red-50 text-red-600 text-[10px] sm:text-xs font-bold uppercase tracking-widest border-l-4 border-red-500">
                   {errorMsg}
                 </div>
               )}
 
-              <div className="grid md:grid-cols-2 gap-10">
+              {/* Grid 1 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Visitor *</label>
-                  <input type="text" {...register("visitorName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Enter full name" />
+                  <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                    Name of the Visitor *
+                  </label>
+                  <input type="text" {...register("visitorName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
                   {errors.visitorName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
+
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Name of the Business *</label>
-                  <input type="text" {...register("businessName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Enter company name" />
+                  <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                    Name of the Business *
+                  </label>
+                  <input type="text" {...register("businessName", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
                   {errors.businessName && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
+              {/* Address */}
               <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Visitor Address with Pin code *</label>
-                <input type="text" {...register("visitorAddress", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="Complete address including pincode" />
+                <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                  Visitor Address with Pin code *
+                </label>
+                <input type="text" {...register("visitorAddress", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
                 {errors.visitorAddress && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
               </div>
 
-              <div className="grid md:grid-cols-2 gap-10">
+              {/* Grid 2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mobile No. *</label>
-                  <input type="tel" {...register("mobileNo", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="+91" />
+                  <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                    Mobile No. *
+                  </label>
+                  <input type="tel" {...register("mobileNo", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
                   {errors.mobileNo && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
+
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email Id *</label>
-                  <input type="email" {...register("email", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" placeholder="your@email.com" />
+                  <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                    Email Id *
+                  </label>
+                  <input type="email" {...register("email", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase" />
                   {errors.email && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-10">
+              {/* Grid 3 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
                 <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                  <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Option</label>
-                  <select {...register("proofType", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase appearance-none cursor-pointer border-l border-white pl-1">
+                  <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                    Option
+                  </label>
+                  <select {...register("proofType", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase">
                     <option value="">Select ID Proof</option>
                     <option value="Aadhaar Card">Aadhaar Card</option>
                     <option value="ECI Card">ECI Card</option>
@@ -132,32 +170,41 @@ const Appointment = () => {
                   </select>
                   {errors.proofType && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
                 </div>
-                <div className="relative pb-2 focus-within:border-orange-600 transition-all flex flex-col justify-end">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1 leading-none">Upload Residential / Business Proof</label>
-                  <input type="file" {...register("proofFile")} className="w-full text-[10px] font-bold text-slate-500 file:mr-4 file:py-1 file:px-3 file:rounded-sm file:border-0 file:text-[9px] file:uppercase file:font-black file:tracking-widest file:bg-slate-100 file:text-slate-900 hover:file:bg-orange-600 hover:file:text-white cursor-pointer transition-all" />
+
+                <div className="flex flex-col justify-end">
+                  <label className="text-[8px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-widest mb-1">
+                    Upload Residential / Business Proof
+                  </label>
+                  <input type="file" {...register("proofFile")} className="w-full text-[10px] font-bold text-slate-500" />
                 </div>
               </div>
 
+              {/* Reason */}
               <div className="relative border-b border-slate-200 pb-2 focus-within:border-orange-600 transition-all">
-                <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Describe the reason for Visit *</label>
-                <textarea rows="4" {...register("reasonForVisit", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase resize-none" placeholder="Provide details here..."></textarea>
+                <label className="text-[8px] sm:text-[12px] font-black text-slate-600 uppercase tracking-widest">
+                  Describe the reason for Visit *
+                </label>
+                <textarea rows="4" {...register("reasonForVisit", { required: true })} className="w-full bg-transparent outline-none py-2 text-xs font-bold uppercase resize-none"></textarea>
                 {errors.reasonForVisit && <span className="absolute right-0 bottom-2 text-[8px] text-red-500 font-bold uppercase">Required</span>}
               </div>
 
-              <div className="pt-6">
+              {/* Button */}
+              <div className="pt-4 sm:pt-6">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-slate-900 text-white py-5 font-black uppercase text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-xl"
+                  className="w-full bg-slate-900 text-white py-4 sm:py-5 font-black uppercase text-[10px] sm:text-[11px] tracking-[0.3em] hover:bg-orange-600 transition-all disabled:opacity-70"
                 >
                   {loading ? "Submitting..." : "Submit"}
                 </button>
-                <div className="mt-6 text-center">
-                  <a href="mailto:appointment@parekhfabrics.com" className="text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 transition-all pb-1">
+
+                <div className="mt-5 sm:mt-6 text-center">
+                  <a href="mailto:appointment@parekhfabrics.com" className="text-[9px] sm:text-[10px] font-bold text-blue-600 uppercase tracking-widest border-b border-blue-100 hover:border-blue-600 pb-1">
                     appointment@parekhfabrics.com
                   </a>
                 </div>
               </div>
+
             </form>
           )}
         </div>

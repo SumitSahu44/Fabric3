@@ -104,7 +104,10 @@ const Blogs = () => {
               <div key={i} className="group cursor-pointer">
                 <div className="aspect-video bg-slate-100 mb-8 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-2xl transition-all duration-700">
                   <img 
-                    src={p.imageUrl || (p.thumbnail ? `${IMAGE_BASE_URL}/${p.thumbnail}` : staticPosts[0].image)} 
+                    src={p.imageUrl || 
+                         (p.thumbnail ? (p.thumbnail.startsWith("http") ? p.thumbnail : `${IMAGE_BASE_URL}/${p.thumbnail}`) : 
+                         (p.image ? (p.image.startsWith("http") ? p.image : `${IMAGE_BASE_URL}/${p.image}`) : 
+                         staticPosts[0].image))} 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
                     alt={p.title}
                     onError={(e) => { e.target.src = staticPosts[0].image }}
