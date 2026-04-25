@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -26,13 +28,24 @@ import ProductGallery from './pages/ProductGallery';
 // import Products from './pages/Products';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   const globalStyles = {
     fontFamily: `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
   };
 
   return (
-    <Router>
-      <div style={globalStyles} className="antialiased selection:bg-orange-500 selection:text-white min-h-screen flex flex-col">
+    <>
+      <AnimatePresence mode="wait">
+        {loading && <Loader key="loader" />}
+      </AnimatePresence>
+      <Router>
+        <div style={globalStyles} className="antialiased selection:bg-orange-500 selection:text-white min-h-screen flex flex-col">
         <ScrollToTop />
         {/* Navbar hamesha top par rahega */}
         <Navbar />
@@ -72,6 +85,7 @@ function App() {
         </div>
       </div>
     </Router>
+    </>
   );
 }
 
