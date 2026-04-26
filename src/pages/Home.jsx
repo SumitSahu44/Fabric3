@@ -86,7 +86,7 @@ const Home = () => {
               </div>
             </div>
             {/* Category 3 */}
-            <div className="relative group h-[400px] overflow-hidden md:mt-12">
+            <div className="relative group h-[400px] overflow-hidden">
               <img src="https://media.istockphoto.com/id/157639058/photo/silk-clothes-rolls.webp?a=1&b=1&s=612x612&w=0&k=20&c=y9DM4bk_Guwd3sphNCcnOmN6mFbnLwaVHTSTQik3cKA=" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-xl font-black uppercase tracking-tighter">Dyed & Printed</h3>
