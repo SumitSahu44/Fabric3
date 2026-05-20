@@ -17,6 +17,7 @@ import ScrollToTop from './components/ScrollToTop'; // Import karo
 import Management from './pages/Management';
 import Circular from './pages/Circular';
 import Blogs from './pages/Blogs';
+import BlogDetails from './pages/BlogDetails';
 import Appointment from './pages/Appointment';
 import Equotation from './pages/Equotation';
 import MediaEvents from './pages/MediaEvents';
@@ -65,6 +66,7 @@ function App() {
             <Route path="/management" element={<Management />} />
             <Route path="/circular" element={<Circular />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/equotation" element={<Equotation />} />
             <Route path="/reviews" element={<Reviews />} />
