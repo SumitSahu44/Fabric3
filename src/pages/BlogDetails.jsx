@@ -171,7 +171,7 @@ const BlogDetails = () => {
 
         {/* Premium Banner Image - Rendered at a balanced medium size, centered */}
         {blogImage && (
-          <div className="max-w-2xl mx-auto bg-slate-50/50 overflow-hidden rounded-[2rem] border border-slate-200 shadow-2xl mb-12 group flex justify-center items-center">
+          <div className="max-w-2xl mx-auto bg-slate-50/50 overflow-hidden rounded-[2rem] border border-slate-100 mb-12 group flex justify-center items-center">
             <img 
               src={blogImage} 
               alt={blog.title}
