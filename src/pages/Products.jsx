@@ -55,7 +55,7 @@ const Products = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[11px] font-black uppercase tracking-[0.4em] text-orange-600 mb-4 block">Textile Marketplace</span>
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-slate-900 leading-none">
@@ -71,7 +71,7 @@ const Products = () => {
         </div>
 
         {/* Filter Bar */}
-        <div className="flex flex-wrap gap-2 mb-12 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex flex-wrap gap-2 mb-12 w-full pb-4 justify-start">
           {categories.map((cat) => (
             <button
               key={cat}

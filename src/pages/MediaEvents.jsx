@@ -63,7 +63,7 @@ const MediaEvents = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-[11px] font-black uppercase tracking-[0.5em] text-orange-600 block mb-4 italic">Corporate Newsroom</span>
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-slate-900 leading-[0.9]">
@@ -72,7 +72,7 @@ const MediaEvents = () => {
           </div>
           
           {/* Filters */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 w-full pb-2 justify-start">
             {['all', 'exhibition', 'news', 'event'].map((f) => (
               <button
                 key={f}
