@@ -58,6 +58,15 @@ const MediaEvents = () => {
   const displayMedia = media.length > 0 ? media : staticEvents;
   const filteredEvents = filter === 'all' ? displayMedia : displayMedia.filter(e => (e.category || e.type || '').toLowerCase() === filter.toLowerCase());
 
+  const dynamicCategories = ['all', ...new Set(displayMedia.map(item => (item.category || item.type || 'Media').toLowerCase()))];
+
+  const formatDate = (dateString) => {
+    if (!dateString) return '';
+    const d = new Date(dateString);
+    if (isNaN(d.getTime())) return dateString; // fallback to original string if not a valid date
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  };
+
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
@@ -73,7 +82,7 @@ const MediaEvents = () => {
           
           {/* Filters */}
           <div className="flex flex-wrap gap-2 w-full pb-2 justify-start">
-            {['all', 'exhibition', 'news', 'event'].map((f) => (
+            {dynamicCategories.map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
@@ -119,14 +128,16 @@ const MediaEvents = () => {
                       onError={(e) => { e.target.src = staticEvents[0].image }}
                     />
                     <div className="absolute top-6 left-6 bg-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.3em] text-orange-600 shadow-xl">
-                      {item.category || item.type || "Exhibition"}
+                      {item.category || item.type || "Media"}
                     </div>
                   </div>
 
                   <div className="space-y-6">
                     <div className="flex items-center gap-6 text-slate-400 text-[10px] font-black uppercase tracking-widest">
-                      <span className="flex items-center gap-2 text-slate-900 bg-slate-50 px-3 py-1 rounded-full border border-slate-100"><Calendar size={12} className="text-orange-600"/> {item.date || new Date(item.createdAt).toLocaleDateString()}</span>
-                      <span className="flex items-center gap-2"><MapPin size={12} className="text-orange-600"/> {item.location || "Corporate Office"}</span>
+                      <span className="flex items-center gap-2 text-slate-900 bg-slate-50 px-3 py-1 rounded-full border border-slate-100"><Calendar size={12} className="text-orange-600"/> {formatDate(item.date || item.createdAt)}</span>
+                      {item.location && (
+                        <span className="flex items-center gap-2"><MapPin size={12} className="text-orange-600"/> {item.location}</span>
+                      )}
                     </div>
                     
                     <h3 className="text-3xl font-black uppercase tracking-tighter text-slate-900 group-hover:text-orange-600 transition-colors flex justify-between items-center leading-none">
