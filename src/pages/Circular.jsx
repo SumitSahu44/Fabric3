@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileText, Calendar, Search, Loader2, RefreshCw, Printer, Eye } from 'lucide-react';
-import { circularApi } from '../utils/api';
+import { circularApi, IMAGE_BASE_URL } from '../utils/api';
 
 const Circular = () => {
   const [headerData, setHeaderData] = useState({ title: 'OFFICIAL CIRCULARS', description: '' });
@@ -9,6 +9,40 @@ const Circular = () => {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const siteId = "ParekhFabrics06";
+
+  const getFullUrl = (url) => {
+    if (!url) return '';
+    return url.startsWith('http') ? url : `${IMAGE_BASE_URL}/${url.replace(/\\/g, '/')}`;
+  };
+
+  const handlePrint = async (e, url) => {
+    if (e && e.preventDefault) {
+      e.preventDefault();
+    }
+    const fullUrl = getFullUrl(url);
+    
+    try {
+      const response = await fetch(fullUrl);
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = blobUrl;
+      document.body.appendChild(iframe);
+      
+      iframe.onload = () => {
+        setTimeout(() => {
+          iframe.contentWindow.focus();
+          iframe.contentWindow.print();
+          setTimeout(() => document.body.removeChild(iframe), 1000);
+        }, 100);
+      };
+    } catch (error) {
+      console.error("Print failed via iframe:", error);
+      window.open(fullUrl, '_blank');
+    }
+  };
 
   const fetchCircularData = async () => {
     try {
@@ -182,19 +216,7 @@ const Circular = () => {
 
                       {/* Print Circular */}
                       <button 
-                        onClick={() => {
-                          const printWindow = window.open(circular.pdfUrl, '_blank');
-                          if (printWindow) {
-                            printWindow.focus();
-                            setTimeout(() => {
-                              try {
-                                printWindow.print();
-                              } catch (e) {
-                                console.log("Printing PDF handled by standard browser preview page.");
-                              }
-                            }, 500);
-                          }
-                        }}
+                        onClick={(e) => handlePrint(e, circular.pdfUrl)}
                         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 bg-slate-900 hover:bg-orange-600 text-white rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-md"
                       >
                         <Printer className="w-4 h-4" /> Print Circular
